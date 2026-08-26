@@ -1,9 +1,12 @@
 {
-  "judge": "LLM judge: Claude Opus 4.8 (in-session, 2026-07-17); single-rater",
+  "judge": "Two independent raters: (1) LLM judge, Claude Opus 4.8 (in-session, 2026-07-17); (2) one of the authors, labeling blind to the LLM's calls.",
+  "n_raters": 2,
+  "rater_agreement": "50/50 (both raters assigned the same label on every sampled event)",
   "rubric": "TRUE iff the marker verbalizes re-examination of prior reasoning: (a) doubting prior work, (b) announcing a re-check, (c) noticing an error/inconsistency, (d) revising the approach. FALSE: generic filler, confirmation/surprise without questioning, unrelated new thought.",
   "n_labeled": 50,
   "precision": 0.88,
   "n_borderline": 8,
+  "borderline_note": "Flagged by both raters as genuinely ambiguous under the rubric. Agreement does not make them unambiguous, so the flip bounds below are retained as the conservative interval.",
   "precision_if_all_borderline_flipped_low": 0.76,
   "precision_if_all_borderline_true": 0.92
 }

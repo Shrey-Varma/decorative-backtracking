@@ -256,8 +256,9 @@ accuracy-per-token from completion-rate effects.
 
 ## Event-detection validation (§11 — closed)
 
-A 50-event random sample of detected correction events was labeled by an LLM
-judge (Claude Opus 4.8, single-rater, rubric in
+A 50-event random sample of detected correction events was labeled independently
+by two raters, an LLM judge (Claude Opus 4.8) and one of the authors working blind
+to the LLM's calls, who agreed on all 50 (rubric in
 `analysis/event_validation_summary.json`): **precision = 0.88** (conservative
 bound 0.76 with every borderline flipped; 0.92 upper). Effect on the null:
 ~12% contamination by non-correction markers can only *attenuate* a real
