@@ -30,8 +30,8 @@ absent. All five data figures rebuild byte-identically from what is tracked
 here.
 
 ```bash
-python scripts/14_make_figures.py --out-dir ../paper/correction_faithfulness/figures
-python scripts/16_make_figures_extra.py --out-dir ../paper/correction_faithfulness/figures
+python scripts/14_make_figures.py        # -> results/figures/
+python scripts/16_make_figures_extra.py  # -> results/figures/
 ```
 
 `scripts/17_make_release_subset.py` regenerates `release/` from a full run.
