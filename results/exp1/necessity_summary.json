@@ -1,0 +1,22 @@
+{
+  "n_informative_events": 60,
+  "n_continuations": 5280,
+  "per_condition": {
+    "natural_resample": 480,
+    "ablate_correction": 480,
+    "ablate_control_feature": 480,
+    "ablate_correction/cand=62649": 480,
+    "ablate_correction/cand=12002": 480,
+    "ablate_correction/cand=38107": 480,
+    "ablate_correction/cand=59368": 480,
+    "ablate_correction/joint": 480,
+    "ablate_correction/mode=mean": 480,
+    "ablate_correction/mask=event_only": 480,
+    "ablate_correction_at_control_pos": 480
+  },
+  "correction_features": [
+    54133
+  ],
+  "control_feature": 38448,
+  "n_active_intervention_keys": 655
+}

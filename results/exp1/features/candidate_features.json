@@ -1,0 +1,658 @@
+{
+  "candidates": [
+    {
+      "feature_id": 54133,
+      "vocab_score": 0.32734715938568115,
+      "answer_predictive_auroc": 0.46415814757347107,
+      "corpus_mean": 0.016113346442580223,
+      "activation_freq": 0.018074939027428627,
+      "dashboard_path": "runs/exp1/features/feature_54133.json",
+      "top_examples": [
+        {
+          "chain_id": "math500__123__c0",
+          "activation": 7.205442905426025,
+          "token_text": " no",
+          "context": "'s wrong here.\n\nWait, why is there a discrepancy? Let me figure this out.\n\nWait, no, actually, when I split the quadrilateral into D B E and B E F, the two triangl"
+        },
+        {
+          "chain_id": "math500__108__c2",
+          "activation": 6.4661545753479,
+          "token_text": ",",
+          "context": "t, that's conflicting with what I thought earlier. Let me think again.\n\nWait, no, if \\( y = 0 \\), then the tangent line is horizontal only if the derivative is 0"
+        },
+        {
+          "chain_id": "math500__177__c2",
+          "activation": 6.46163272857666,
+          "token_text": " no",
+          "context": "culation, it's sqrt(12). That doesn't make sense. Maybe I made a mistake.\n\nWait, no. P is the center of the circle tangent to Q and S. Since all circles have radiu"
+        },
+        {
+          "chain_id": "math500__108__c2",
+          "activation": 6.348475456237793,
+          "token_text": " no",
+          "context": "Wait, that's conflicting with what I thought earlier. Let me think again.\n\nWait, no, if \\( y = 0 \\), then the tangent line is horizontal only if the derivative is "
+        },
+        {
+          "chain_id": "math500__123__c1",
+          "activation": 6.308895587921143,
+          "token_text": " no",
+          "context": "F, we have to make sure that these two triangles don't overlap.\n\nWait, actually, no. D-B-E-F is a quadrilateral, so splitting it into D-B-E and E-F-D is correct be"
+        },
+        {
+          "chain_id": "math500__122__c0",
+          "activation": 6.297768592834473,
+          "token_text": " no",
+          "context": "s 9. Hmm, something's not adding up here. Wait, no, wait, let me clarify.\n\nWait, no, hold on. Wait, 15 / 1500 is 0.01, and if we set that equal to N2 / 2500, then "
+        },
+        {
+          "chain_id": "math500__123__c0",
+          "activation": 6.235971450805664,
+          "token_text": ",",
+          "context": "wrong here.\n\nWait, why is there a discrepancy? Let me figure this out.\n\nWait, no, actually, when I split the quadrilateral into D B E and B E F, the two triangle"
+        },
+        {
+          "chain_id": "math500__32__c2",
+          "activation": 6.217989444732666,
+          "token_text": " no",
+          "context": "tion, I'm effectively reducing the number of units from 6 to 5? No, wait.\n\nWait, no. If I fix Pierre's position, then the block is fixed in position, but the rest "
+        },
+        {
+          "chain_id": "math500__125__c1",
+          "activation": 6.1999006271362305,
+          "token_text": " no",
+          "context": " 3.6 squared. Hmm, that's a bit confusing. Maybe I should parse it again.\n\nWait, no, actually, let me read the problem again carefully: \"Evaluate \u23a1(3.6)\u00b2\u23a4 - (\u23a13.6\u23a4"
+        },
+        {
+          "chain_id": "math500__9__c3",
+          "activation": 6.103070259094238,
+          "token_text": " case",
+          "context": "dition is different, the number of distinct values is limited.\n\nWait, but in our case, the addition is at the end, so the different groupings only affect how much is"
+        },
+        {
+          "chain_id": "math500__125__c1",
+          "activation": 5.985681056976318,
+          "token_text": ",",
+          "context": "6 squared. Hmm, that's a bit confusing. Maybe I should parse it again.\n\nWait, no, actually, let me read the problem again carefully: \"Evaluate \u23a1(3.6)\u00b2\u23a4 - (\u23a13.6\u23a4)"
+        },
+        {
+          "chain_id": "math500__120__c0",
+          "activation": 5.894786834716797,
+          "token_text": " no",
+          "context": "fic example, it's not zero, so that suggests that my assumption is wrong.\n\nWait, no, in my specific example, \\( f(x) = x \\), which is odd, and \\( g(x) = x^2 \\), wh"
+        },
+        {
+          "chain_id": "math500__123__c0",
+          "activation": 5.810712814331055,
+          "token_text": " actually",
+          "context": "rong here.\n\nWait, why is there a discrepancy? Let me figure this out.\n\nWait, no, actually, when I split the quadrilateral into D B E and B E F, the two triangles might n"
+        },
+        {
+          "chain_id": "math500__125__c1",
+          "activation": 5.740506172180176,
+          "token_text": " me",
+          "context": " that's a bit confusing. Maybe I should parse it again.\n\nWait, no, actually, let me read the problem again carefully: \"Evaluate \u23a1(3.6)\u00b2\u23a4 - (\u23a13.6\u23a4)\u00b2.\" So, it's the "
+        },
+        {
+          "chain_id": "math500__115__c3",
+          "activation": 5.6779279708862305,
+          "token_text": " no",
+          "context": "tributing to the denominator.\n\nWait, is that correct? Let me think again.\n\nWait, no, actually, the counts should be for each letter. So, since E appears twice, tha"
+        },
+        {
+          "chain_id": "math500__120__c0",
+          "activation": 5.553858757019043,
+          "token_text": ",",
+          "context": " example, it's not zero, so that suggests that my assumption is wrong.\n\nWait, no, in my specific example, \\( f(x) = x \\), which is odd, and \\( g(x) = x^2 \\), whi"
+        },
+        {
+          "chain_id": "math500__32__c2",
+          "activation": 5.540287494659424,
+          "token_text": " no",
+          "context": "atch.\n\nHmm, that's a discrepancy. So, which is correct? Is it 120 or 720?\n\nWait, no. If I fix Pierre's position, then the block is fixed in position as well, but R"
+        },
+        {
+          "chain_id": "math500__37__c3",
+          "activation": 5.499719619750977,
+          "token_text": " case",
+          "context": "s it did before? Or is it not exactly the same?\n\nWait, no, that might not be the case. Because when you rotate a shape, it's not just the vertices moving to the next"
+        },
+        {
+          "chain_id": "math500__128__c2",
+          "activation": 5.432582378387451,
+          "token_text": " no",
+          "context": "hat contradicts our earlier result of 36 miles. Hmm, so which is correct?\n\nWait, no, hold on. If in a week, she walks two sets, that's 8 miles, but in reality, 7 d"
+        },
+        {
+          "chain_id": "math500__43__c1",
+          "activation": 5.415447235107422,
+          "token_text": " no",
+          "context": " it's just the distance from \\((x, 0)\\) to \\((0, 20)\\) or something else.\n\nWait, no. Maybe it's the distance from \\((x, y)\\) to two fixed points? Let me see. If I "
+        }
+      ]
+    },
+    {
+      "feature_id": 62649,
+      "vocab_score": 0.2969686686992645,
+      "answer_predictive_auroc": 0.5449126362800598,
+      "corpus_mean": 0.1484554409980774,
+      "activation_freq": 0.151649609208107,
+      "dashboard_path": "runs/exp1/features/feature_62649.json",
+      "top_examples": [
+        {
+          "chain_id": "math500__76__c1",
+          "activation": 7.42129373550415,
+          "token_text": "Wait",
+          "context": "o, so it's not just x < 0 or x > 0 because x can be greater than zero as well.\n\nWait, hold on. Let me clarify. If the domain is x < a or x > b, then the function is"
+        },
+        {
+          "chain_id": "math500__142__c1",
+          "activation": 6.73076868057251,
+          "token_text": ".\n\n",
+          "context": "dent is just a single person, not a block. So, perhaps I'm making a mistake here.\n\nWait, the problem says that all the members of each party must sit next to each "
+        },
+        {
+          "chain_id": "math500__76__c2",
+          "activation": 6.710110664367676,
+          "token_text": "?\n\n",
+          "context": "e greater than zero, and b must be less than zero? Or is it the other way around?\n\nWait, no. Let me visualize this. If I have x < a or x > b, and the function is u"
+        },
+        {
+          "chain_id": "math500__51__c2",
+          "activation": 6.528820037841797,
+          "token_text": "?\n\n",
+          "context": "ree 1, so the quotient should be degree 5. So, how come we have six coefficients?\n\nWait, perhaps I miscounted the number of coefficients. Let's see: the dividend i"
+        },
+        {
+          "chain_id": "math500__76__c1",
+          "activation": 6.301333427429199,
+          "token_text": ".\n\n",
+          "context": "zero, so it's not just x < 0 or x > 0 because x can be greater than zero as well.\n\nWait, hold on. Let me clarify. If the domain is x < a or x > b, then the functio"
+        },
+        {
+          "chain_id": "math500__162__c3",
+          "activation": 6.277846813201904,
+          "token_text": ".\n\n",
+          "context": " the same. Hmm, but 1/3 is approximately 0.333, which is slightly less than 0.34.\n\nWait, that discrepancy is because 100 isn't a multiple of 6, so the exact count "
+        },
+        {
+          "chain_id": "math500__23__c1",
+          "activation": 6.195799827575684,
+          "token_text": ".\n\n",
+          "context": "Factor: \\( (x - 1)(x - 5) = 0 \\)\n\nSolutions: 1 and 5. Checked both, only 5 works.\n\nWait, so is that all? Is there only one solution? Hmm. Let me see if I can visua"
+        },
+        {
+          "chain_id": "math500__76__c1",
+          "activation": 6.188018798828125,
+          "token_text": ".\n\n",
+          "context": " there might be some specific values a and b that define the domain in that form.\n\nHmm, maybe I'm missing something here. Let me write down what I know. The functi"
+        },
+        {
+          "chain_id": "math500__51__c2",
+          "activation": 6.0328545570373535,
+          "token_text": ".\n\n",
+          "context": "ial, but wait, the quotient should be fifth-degree. Hmm, that doesn't seem right.\n\nWait, hold on. Maybe I made a mistake in the process. Let me recount the coeffic"
+        },
+        {
+          "chain_id": "math500__142__c1",
+          "activation": 6.013503074645996,
+          "token_text": "Wait",
+          "context": "e treated as a separate block or if they can be inserted into the arrangement.\n\nWait, actually, in our earlier step, we considered each party as a block, so the thr"
+        },
+        {
+          "chain_id": "math500__142__c1",
+          "activation": 5.99536657333374,
+          "token_text": ".\n\n",
+          "context": " are treated as a separate block or if they can be inserted into the arrangement.\n\nWait, actually, in our earlier step, we considered each party as a block, so the"
+        },
+        {
+          "chain_id": "math500__76__c2",
+          "activation": 5.990924835205078,
+          "token_text": " So",
+          "context": "umbers except x = 0. But the problem states it as two intervals: x < a or x > b. So, if the domain is x < a or x > b, then a must be greater than zero, and b must "
+        },
+        {
+          "chain_id": "math500__162__c3",
+          "activation": 5.9674482345581055,
+          "token_text": "Wait",
+          "context": "102, which is more than 100. So, there are 16 numbers divisible by 6 up to 96.\n\nWait, but 96 is less than 100, so does that mean we have 16 numbers? Hmm, actually, "
+        },
+        {
+          "chain_id": "math500__33__c2",
+          "activation": 5.959779739379883,
+          "token_text": ".\n\n",
+          "context": "is 3/5, but the given fourth term is 3, not 3/5. So, maybe I made a mistake here.\n\nWait, let me double-check my calculations. The third term is 5, and if we multip"
+        },
+        {
+          "chain_id": "math500__137__c1",
+          "activation": 5.916490077972412,
+          "token_text": "Wait",
+          "context": " 2 goes into 11 five times in base 10, but in base 5, how is that represented?\n\nWait, maybe I'm overcomplicating. Let me do it step by step.\n\nIn base 5, 2_5 is 2 in"
+        },
+        {
+          "chain_id": "math500__154__c1",
+          "activation": 5.872224807739258,
+          "token_text": "?\n\n",
+          "context": "to the ceiling, then across, then down to the fly. But how much distance is that?\n\nWait, maybe I should think about the net. If I unfold the walls and ceiling into"
+        },
+        {
+          "chain_id": "math500__107__c0",
+          "activation": 5.817972660064697,
+          "token_text": "So",
+          "context": ", 2 is excluded because it's even. Therefore, the intersection will exclude 2.\n\nSo, the intersection of these two sets will consist of all prime numbers less than"
+        },
+        {
+          "chain_id": "math500__76__c2",
+          "activation": 5.7651238441467285,
+          "token_text": " so",
+          "context": " leave out x = 0, which is correct because the function is undefined there. Hmm, so maybe a is zero and b is zero?\n\nBut that can't be, because the problem says x <"
+        },
+        {
+          "chain_id": "math500__82__c1",
+          "activation": 5.753172397613525,
+          "token_text": ".\n\n",
+          "context": "most x-coordinate of the second square. So, x2 - x1 can't be less than 4 - 2 = 2.\n\nTherefore, 3/2 seems to be the maximum slope.\n\nBut wait, let me verify. Maybe th"
+        },
+        {
+          "chain_id": "math500__120__c0",
+          "activation": 5.745699882507324,
+          "token_text": ".\n\n",
+          "context": " Wait, that can't be right unless \\( k(x) \\) is zero, which it isn't necessarily.\n\nWait, maybe I made a mistake here. Let's take it step by step.\n\nLet me denote \\("
+        }
+      ]
+    },
+    {
+      "feature_id": 12002,
+      "vocab_score": 0.2808530628681183,
+      "answer_predictive_auroc": 0.47825610637664795,
+      "corpus_mean": 0.05737118422985077,
+      "activation_freq": 0.03937136381864548,
+      "dashboard_path": "runs/exp1/features/feature_12002.json",
+      "top_examples": [
+        {
+          "chain_id": "math500__32__c2",
+          "activation": 10.272555351257324,
+          "token_text": "Hmm",
+          "context": "20 ways. But wait, that's only 120, but earlier I had 720. That doesn't match.\n\nHmm, that's a discrepancy. So, which is correct? Is it 120 or 720?\n\nWait, no. If I "
+        },
+        {
+          "chain_id": "math500__57__c3",
+          "activation": 9.467328071594238,
+          "token_text": "Okay",
+          "context": "-4)^2) = sqrt(16) = 4.\n\nSimilarly, (1 - i)^8 = (-4)^2 = 16. So, modulus is 16.\n\nOkay, that's consistent with my previous result. So, whether I use polar form with D"
+        },
+        {
+          "chain_id": "math500__120__c0",
+          "activation": 9.252979278564453,
+          "token_text": "Wait",
+          "context": "\\). Therefore, \\( f(m(x)) = -f(m(x)) \\), which implies that \\( f(m(x)) = 0 \\).\n\nWait, that can't be right unless \\( m(x) \\) is zero, which it isn't necessarily. Hmm"
+        },
+        {
+          "chain_id": "math500__11__c3",
+          "activation": 9.113964080810547,
+          "token_text": "So",
+          "context": "gging in n=1, I found c. Then, using that, I found p(8). So, that seems solid.\n\nSo, I think the answer is 1/9.\n\n**Final Answer**\n\\boxed{\\dfrac{1}{9}}\n</think>\n\nGi"
+        },
+        {
+          "chain_id": "math500__83__c3",
+          "activation": 8.984508514404297,
+          "token_text": "Wait",
+          "context": "hat suggests that there might be another crossing point between 1.95 and 1.99.\n\nWait, but earlier, I thought that at \\(x=2\\), left side equals right side, and for \\"
+        },
+        {
+          "chain_id": "math500__108__c0",
+          "activation": 8.925680160522461,
+          "token_text": "Hmm",
+          "context": " which simplifies to \\( -1 = 0 \\). That's impossible. So, that can't be right.\n\nHmm, so maybe my assumption that the circle is centered at the origin is incorrect."
+        },
+        {
+          "chain_id": "math500__138__c1",
+          "activation": 8.855752944946289,
+          "token_text": "I",
+          "context": " 5 for all colors, which gives 5/30 = 1/6.\n\nTherefore, the probability is 1/6.\n\nI think that's correct. Let me see if there's another way to think about it.\n\nSup"
+        },
+        {
+          "chain_id": "math500__126__c3",
+          "activation": 8.837455749511719,
+          "token_text": "Wait",
+          "context": "i - \\sqrt{10} \\left( \\frac{\\sqrt{2}}{2} - i \\frac{\\sqrt{2}}{2} \\right) }{2} \\)\n\nWait, this seems confusing. Maybe I should compute both roots explicitly.\n\nFirst, le"
+        },
+        {
+          "chain_id": "math500__128__c2",
+          "activation": 8.693684577941895,
+          "token_text": "Wait",
+          "context": "each day. So, maybe she can adjust her walks to walk fewer miles on some days?\n\nWait, but the problem says she walks four miles every third day. So, that might mean"
+        },
+        {
+          "chain_id": "math500__120__c0",
+          "activation": 8.642967224121094,
+          "token_text": "Wait",
+          "context": "it, that can't be right unless \\( k(x) \\) is zero, which it isn't necessarily.\n\nWait, maybe I made a mistake here. Let's take it step by step.\n\nLet me denote \\( f(k"
+        },
+        {
+          "chain_id": "math500__162__c3",
+          "activation": 8.437756538391113,
+          "token_text": "Wait",
+          "context": "e same. Hmm, but 1/3 is approximately 0.333, which is slightly less than 0.34.\n\nWait, that discrepancy is because 100 isn't a multiple of 6, so the exact count isn'"
+        },
+        {
+          "chain_id": "math500__138__c1",
+          "activation": 8.333946228027344,
+          "token_text": "I",
+          "context": "me color for the bags to remain identical.\n\nTherefore, the probability is 1/6.\n\nI think I've thought about this from multiple angles, and each time I come up wit"
+        },
+        {
+          "chain_id": "math500__115__c1",
+          "activation": 8.302421569824219,
+          "token_text": "Wait",
+          "context": "{8!}{2! \\times 2! \\times 2!}\n\\]\n\nWhich is 8! / (2 \u00d7 2 \u00d7 2) = 40320 / 8 = 5040.\n\nWait, hold on. Now I'm confused because earlier I thought only E and L were repeatin"
+        },
+        {
+          "chain_id": "math500__164__c2",
+          "activation": 8.296772003173828,
+          "token_text": "Wait",
+          "context": "s negative, around -0.1763. So, adding them together: 3.939 - 0.1763 \u2248 3.7627.\n\nWait, that's a positive value, about 3.76. So, my earlier numerical approximation wh"
+        },
+        {
+          "chain_id": "math500__138__c1",
+          "activation": 8.295159339904785,
+          "token_text": "Yes",
+          "context": " = 1/30. Since there are five colors, the total probability is 5*(1/30) = 1/6.\n\nYes, that seems consistent.\n\nAlternatively, maybe we can think of the entire proces"
+        },
+        {
+          "chain_id": "math500__74__c3",
+          "activation": 8.26602840423584,
+          "token_text": "ems",
+          "context": "fies to \\(\\frac{\\cos^2 x}{\\cos x \\sin x} = \\frac{\\cos x}{\\sin x} = \\cot x\\).\n\nSeems like I didn't make any errors. So, the simplified form of the expression is ind"
+        },
+        {
+          "chain_id": "math500__153__c0",
+          "activation": 8.252395629882812,
+          "token_text": "But",
+          "context": "n a straight line is 8. So, the probability is 8/84, which simplifies to 2/21.\n\nBut hold on, I just recalled that sometimes in these grid problems, people also cou"
+        },
+        {
+          "chain_id": "math500__76__c1",
+          "activation": 8.231233596801758,
+          "token_text": "Wait",
+          "context": " is positive for any x \u2260 0, so log(x squared) should be defined for all x \u2260 0.\n\nWait, so is log(x squared) equal to 2 log x? Or is it equal to log(x squared)?\n\nLet "
+        },
+        {
+          "chain_id": "math500__115__c1",
+          "activation": 8.227181434631348,
+          "token_text": "So",
+          "context": "2! \u00d7 2! = 8. Therefore, the number of unique arrangements is 40320 / 8 = 5040.\n\nSo, my initial mistake was not noticing that P also appears twice. So, in my first"
+        },
+        {
+          "chain_id": "math500__142__c3",
+          "activation": 8.160204887390137,
+          "token_text": "So",
+          "context": "ments would be 2 (for the order of blocks) \u00d7 5! \u00d7 5! = 2 \u00d7 120 \u00d7 120 = 28,800.\n\nSo, same answer. So, that's consistent.\n\nAlternatively, if I didn't fix the Indepe"
+        }
+      ]
+    },
+    {
+      "feature_id": 38107,
+      "vocab_score": 0.2728981077671051,
+      "answer_predictive_auroc": 0.4345959722995758,
+      "corpus_mean": 0.05872349068522453,
+      "activation_freq": 0.00892114918678999,
+      "dashboard_path": "runs/exp1/features/feature_38107.json",
+      "top_examples": [
+        {
+          "chain_id": "math500__73__c0",
+          "activation": 25.724639892578125,
+          "token_text": "Wait",
+          "context": " a + something)/sqrt(ab - b + something else).\n\nWait, but no, it's as defined.\n\nWait, perhaps I made a mistake in the test case.\n\nWait, when a=2, b=3:\n\nab + a=6 + 2"
+        },
+        {
+          "chain_id": "math500__73__c0",
+          "activation": 24.394071578979492,
+          "token_text": "Wait",
+          "context": "a(b +1))/(a(b -1)) )\n\nWhich is sqrt( (b +1)/(b -1) )\n\nYes, that seems correct.\n\nWait, maybe the problem is that I'm treating the numerator and denominator as separa"
+        },
+        {
+          "chain_id": "math500__123__c0",
+          "activation": 24.384963989257812,
+          "token_text": "Wait",
+          "context": "hen back to (0,3). So it's a trapezoid-like shape but not exactly a trapezoid.\n\nWait, maybe using the shoelace formula is the most reliable here, and since it gave "
+        },
+        {
+          "chain_id": "math500__73__c0",
+          "activation": 24.354698181152344,
+          "token_text": "Wait",
+          "context": "(a(b -1)) )=sqrt( (b +1)/(b -1) )\n\nBut in the test case, this is not matching.\n\nWait, unless I'm making a mistake in thinking that sqrt(ab +a)/sqrt(ab -b)=sqrt( (b "
+        },
+        {
+          "chain_id": "math500__130__c3",
+          "activation": 24.04867935180664,
+          "token_text": "Wait",
+          "context": "rhaps because I misapplied the modulus when breaking down the negative number.\n\nWait, if I have -11213141, which is -1*10^7 -1*10^6 -2*10^5 -1*10^4 -3*10^3 -1*10^2 "
+        },
+        {
+          "chain_id": "math500__130__c3",
+          "activation": 23.727170944213867,
+          "token_text": "Wait",
+          "context": " -7 mod18=11.\n\nBut in the first method, I get13.\n\nWait, so there's a conflict.\n\nWait, perhaps I made a mistake in the first method.\n\nWait, let me compute the sum of"
+        },
+        {
+          "chain_id": "math500__164__c2",
+          "activation": 23.33847999572754,
+          "token_text": "Wait",
+          "context": " not quite.\n\nAlternatively, maybe I can use the identity for a sum of cosines.\n\nWait, 1 + 4 cos \u03b8 = 1 + 2 cos \u03b8 + 2 cos \u03b8. Hmm, not helpful.\n\nAlternatively, perhaps"
+        },
+        {
+          "chain_id": "math500__152__c0",
+          "activation": 23.328929901123047,
+          "token_text": "Wait",
+          "context": ") in terms of known quantities?\n\nWait, unless I can find c in terms of b or d.\n\nWait, in the coordinate system, the centroid is at ((2/3)(b + c), (2d)/3). Is there "
+        },
+        {
+          "chain_id": "math500__137__c1",
+          "activation": 23.30382537841797,
+          "token_text": "Wait",
+          "context": " be the correct quotient.\n\nTherefore, I must have messed up the long division.\n\nWait, maybe I need to think of the divisor as 2_5 and the dividend as 413_5, but in "
+        },
+        {
+          "chain_id": "math500__154__c3",
+          "activation": 23.25320053100586,
+          "token_text": "Wait",
+          "context": " and the fly ending at (12,9,1), and find the shortest path over the surfaces.\n\nWait, perhaps the shortest path is a combination of moving along the back wall, ceil"
+        },
+        {
+          "chain_id": "math500__137__c1",
+          "activation": 23.112224578857422,
+          "token_text": "Wait",
+          "context": " need to think of the divisor as 2_5 and the dividend as 413_5, but in base 5.\n\nWait, perhaps I should perform the multiplication and addition in base 5.\n\nSo, 2_5 *"
+        },
+        {
+          "chain_id": "math500__92__c1",
+          "activation": 22.856367111206055,
+          "token_text": "Wait",
+          "context": "that's 0.00458752\u22480.45875%.\n\nBut that's conflicting with the binomial formula.\n\nWait, so perhaps the problem is that when I compute (1/5)^4*(4/5)^3, it's not 0.0002"
+        },
+        {
+          "chain_id": "math500__9__c3",
+          "activation": 22.83210563659668,
+          "token_text": "Wait",
+          "context": "f we can group the addition with different parts, the result can be different.\n\nWait, as I thought before, when grouping the addition with different parts, either t"
+        },
+        {
+          "chain_id": "math500__164__c2",
+          "activation": 22.792104721069336,
+          "token_text": "Wait",
+          "context": "\n\nAlternatively, maybe I can use the formula for the sum of a sine and cosine.\n\nWait, I have sin \u03b8 * (1 + 4 cos \u03b8) / cos \u03b8.\n\nLet me write that as sin \u03b8 * (1 + 4 cos"
+        },
+        {
+          "chain_id": "math500__152__c0",
+          "activation": 22.72004508972168,
+          "token_text": "Wait",
+          "context": "fy bd = 72, and compute (b + c).\n\nWait, but without knowing c, it's difficult.\n\nWait, maybe I can use the fact that in triangle ABC, the centroid divides the median"
+        },
+        {
+          "chain_id": "math500__130__c3",
+          "activation": 22.543376922607422,
+          "token_text": "Wait",
+          "context": "3.\n\nWait, but according to the division method, it's11.\n\nSo, which is correct?\n\nWait, is my first method wrong?\n\nWait, let me try to compute -11213141 divided by18."
+        },
+        {
+          "chain_id": "math500__22__c1",
+          "activation": 22.505775451660156,
+          "token_text": "Wait",
+          "context": "er group, but the problem says \"paid for each dog they walk,\" so it's per dog.\n\nWait, perhaps I need to think in terms of the total pay.\n\nLet me denote Denali's pay"
+        },
+        {
+          "chain_id": "math500__83__c3",
+          "activation": 22.469566345214844,
+          "token_text": "Wait",
+          "context": "hen zero.\n\nWait, but 9^x +19 -10^x, so it's a combination of two exponentials.\n\nWait, perhaps h(x) is not monotonic, so it can have multiple roots.\n\nTherefore, the "
+        },
+        {
+          "chain_id": "math500__164__c2",
+          "activation": 22.419593811035156,
+          "token_text": "Wait",
+          "context": " so that's consistent.\n\nAlternatively, perhaps I can find an exact expression.\n\nWait, going back, I had:\n\n[2 sin 20\u00b0 - sin 80\u00b0] / cos 80\u00b0 \u2248 -1.732\n\nBut 2 sin 20\u00b0 - "
+        },
+        {
+          "chain_id": "math500__154__c2",
+          "activation": 22.34649658203125,
+          "token_text": "Wait",
+          "context": "s the ceiling to the fly's position on the right wall, but in a different way.\n\nWait, but the fly is on the right wall, one foot from the front. So, if the gecko go"
+        }
+      ]
+    },
+    {
+      "feature_id": 59368,
+      "vocab_score": 0.2694890797138214,
+      "answer_predictive_auroc": 0.497396320104599,
+      "corpus_mean": 0.029606390744447708,
+      "activation_freq": 0.017154309898614883,
+      "dashboard_path": "runs/exp1/features/feature_59368.json",
+      "top_examples": [
+        {
+          "chain_id": "math500__24__c3",
+          "activation": 12.77022933959961,
+          "token_text": " no",
+          "context": "06089 \u2248 1.203089, which is 1.097^2.\n\nWait, that's different from earlier.\n\nWait, no, 1.097 * 1.097:\n\nCompute 1*1 = 1\n\n1*0.097 = 0.097\n\n0.097*1 = 0.097\n\n0.097*0.097"
+        },
+        {
+          "chain_id": "math500__92__c1",
+          "activation": 11.991677284240723,
+          "token_text": ".",
+          "context": "o, 2240/15625. Wait, but earlier I said 448/15625. Wait, that doesn't make sense. Wait, where did I go wrong?\n\nWait, no, wait. Let me recast it.\n\nWait, 35 * (1/6"
+        },
+        {
+          "chain_id": "math500__92__c1",
+          "activation": 11.980886459350586,
+          "token_text": ",",
+          "context": "had 448/15625\u22480.02867, which is about 2.867%. So, why the discrepancy?\n\nWait, no, wait. Wait, hold on. Wait, when I compute 35*(1/5)^4*(4/5)^3, I have 35*(1/625)"
+        },
+        {
+          "chain_id": "math500__92__c1",
+          "activation": 11.955082893371582,
+          "token_text": ",",
+          "context": "0/15625. Wait, but earlier I said 448/15625. Wait, that doesn't make sense. Wait, where did I go wrong?\n\nWait, no, wait. Let me recast it.\n\nWait, 35 * (1/625) * "
+        },
+        {
+          "chain_id": "math500__24__c3",
+          "activation": 11.944170951843262,
+          "token_text": ",",
+          "context": "mbers, 1.097^3 \u22481.3108, which is less than 1.096^3 \u22481.3121. That can't be.\n\nWait, that suggests that perhaps my calculation is incorrect.\n\nWait, 1.096^3 is 1.312"
+        },
+        {
+          "chain_id": "math500__21__c2",
+          "activation": 11.886401176452637,
+          "token_text": " no",
+          "context": "4097^6 \u2248 (0.4097)^2^3 \u2248 (0.1676)^3 \u22480.00455\\). Wait, that's not matching.\n\nWait, no, wait, \\(y \u22480.4097\\), so \\(y^2 \u22480.1676\\), \\(y^3\u22480.0693\\), \\(y^4\u22480.0284\\), \\(y^5"
+        },
+        {
+          "chain_id": "math500__24__c3",
+          "activation": 11.721443176269531,
+          "token_text": "Wait",
+          "context": "+ 0.106089 \u2248 1.203089, which is 1.097^2.\n\nWait, that's different from earlier.\n\nWait, no, 1.097 * 1.097:\n\nCompute 1*1 = 1\n\n1*0.097 = 0.097\n\n0.097*1 = 0.097\n\n0.097*0"
+        },
+        {
+          "chain_id": "math500__164__c2",
+          "activation": 11.356467247009277,
+          "token_text": "?\n\n",
+          "context": "5.671. Wait, that's different from my earlier calculation. Wait, is that correct?\n\nWait, hold on. Let me check.\n\nWait, no. Wait, tan 80\u00b0 is approximately 5.671, bu"
+        },
+        {
+          "chain_id": "math500__32__c2",
+          "activation": 11.253087043762207,
+          "token_text": " no",
+          "context": "table: (8 - 3 + 1)! * 3! = 6! * 6 = 720 * 6 = 4320.\n\nWait, that can't be.\n\nWait, no, wait: (n - m + 1)! * m!.\n\nSo, n=8, m=3: (8 - 3 + 1)! * 3! = 6! * 6 = 720 * 6 ="
+        },
+        {
+          "chain_id": "math500__83__c3",
+          "activation": 11.15720272064209,
+          "token_text": ",",
+          "context": "t, that's negative.\n\nWait, but earlier, I thought \\(h(1.95)=92.7 -89\u22483.7\\). Wait, no, I must have confused f(x) and g(x).\n\nWait, f(x)=9^x +19, so at \\(x=1.95\\), "
+        },
+        {
+          "chain_id": "math500__164__c2",
+          "activation": 10.888532638549805,
+          "token_text": "Wait",
+          "context": "71. Wait, that's different from my earlier calculation. Wait, is that correct?\n\nWait, hold on. Let me check.\n\nWait, no. Wait, tan 80\u00b0 is approximately 5.671, but ta"
+        },
+        {
+          "chain_id": "math500__21__c2",
+          "activation": 10.711706161499023,
+          "token_text": ",",
+          "context": "\u22482455. So, total\u224811112 +2455\u224813567. That can't be right because S_6=13536.\n\nWait, that's inconsistent. Wait, if x^6\u224813536 - y^6\u224813535.995, but my step-by-step mu"
+        },
+        {
+          "chain_id": "math500__164__c2",
+          "activation": 10.637626647949219,
+          "token_text": ",",
+          "context": "from my initial thought. So, tan 100\u00b0 is approximately -5.671, not -0.1763. Wait, that's a big difference.\n\nWait, I think I confused degrees and radians in my in"
+        },
+        {
+          "chain_id": "math500__115__c3",
+          "activation": 10.349424362182617,
+          "token_text": ",",
+          "context": " actually, it's 8 letters? Wait, no, hold on, let me count again.\n\nWait, hold on, maybe I miscounted the letters. Wait, the word is \"ELLIPSE.\" Let me write it ou"
+        },
+        {
+          "chain_id": "math500__83__c3",
+          "activation": 10.22327995300293,
+          "token_text": " no",
+          "context": ", that's negative.\n\nWait, but earlier, I thought \\(h(1.95)=92.7 -89\u22483.7\\). Wait, no, I must have confused f(x) and g(x).\n\nWait, f(x)=9^x +19, so at \\(x=1.95\\), f(x"
+        },
+        {
+          "chain_id": "math500__119__c2",
+          "activation": 10.025445938110352,
+          "token_text": " no",
+          "context": "+6=12.\n\nSo, 1 +12=13. Wait, but that contradicts my previous calculation.\n\nWait, no, 2 +3 -4 +5 +6: 2 +3=5, 5 -4=1, 1 +5=6, 6 +6=12.\n\nSo, 2 +3 -4 +5 +6=12.\n\nSo, 1 "
+        },
+        {
+          "chain_id": "math500__119__c2",
+          "activation": 9.93994426727295,
+          "token_text": ",",
+          "context": "12.\n\nSo, 1 +12=13. Wait, but that contradicts my previous calculation.\n\nWait, no, 2 +3 -4 +5 +6: 2 +3=5, 5 -4=1, 1 +5=6, 6 +6=12.\n\nSo, 2 +3 -4 +5 +6=12.\n\nSo, 1 +"
+        },
+        {
+          "chain_id": "math500__130__c3",
+          "activation": 9.844255447387695,
+          "token_text": " no",
+          "context": "-11,219,652 +18*623,314= -11,219,652 +11,219,652=0.\n\nWait, that can't be.\n\nWait, no, no, sorry.\n\nWait, -11213141 divided by18 is equal to -623,313.5.\n\nSo, the inte"
+        },
+        {
+          "chain_id": "math500__137__c3",
+          "activation": 9.818772315979004,
+          "token_text": ".",
+          "context": "ot 54. Hmm, that can't be. So, something's definitely wrong here.\n\nWait, hold on. Maybe I did the initial division wrong? Let me check.\n\nWait, 413 base 5 is 4*25"
+        },
+        {
+          "chain_id": "math500__21__c2",
+          "activation": 9.633040428161621,
+          "token_text": ",",
+          "context": "it's 6768 -1144\u221a35\u22480.9. Therefore, my algebraic computation must be wrong.\n\nWait, no, that can't be. Wait, let me compute 22\u221a7 and 26\u221a5 numerically:\n\n22\u221a7 \u224822*2."
+        }
+      ]
+    }
+  ],
+  "control_feature_id": 38448,
+  "n_marker_tokens": 83261,
+  "n_nonmarker_tokens": 83261,
+  "n_chains": 200
+}

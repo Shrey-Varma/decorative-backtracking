@@ -1,0 +1,36 @@
+{
+  "registered_at": "2026-07-17, before any stage 11/12/13 continuation was generated",
+  "question": "Is the verbalized self-correction signal SUFFICIENT to induce revision / rescue a wrong intended answer? (mirror of the pre-registered necessity test)",
+  "experiments": {
+    "stage_11_text_insertion": {
+      "populations": {
+        "wrong_point": "matched 'intended answer wrong, far from every event' truncations of the informative-event chains (chains that self-corrected elsewhere; base rescue rate expected high — ceiling-bounded)",
+        "failed_chain": "mid-trace truncations of chains whose final answer is wrong (never rescued; no ceiling — the clean sufficiency population)"
+      },
+      "arms": ["insert_natural (reference)", "insert_correction/v=assert_mistake", "insert_correction/v=soft_recheck", "insert_correction/v=minimal_marker", "insert_filler (length-matched extra-tokens control)"],
+      "design_notes": "insertion points snapped to sentence starts; three phrasing variants dissociate the reconsideration FORM from asserted error INFORMATION; all arms one backend (vLLM), shared seeds, K=8"
+    },
+    "stage_12_hooked_sufficiency": {
+      "arms": ["natural_at_insert (reference)", "clamp_on_feature/scale={1,2}", "add_direction/layer=19/scale={1,2}"],
+      "dose": "clamp value = scale x median in-span max activation of the primary feature; alpha = scale x raw diff-in-means norm; window = median informative-event span, event_only",
+      "manipulation_check": "an arm counts as a valid dose only if its marker-induction rate (continuation verbalizes a lexicon marker within 240 chars) is >= 2x the natural_at_insert rate; otherwise the arm bounds only the tested dose, and the dose ladder result is reported as such"
+    },
+    "stage_13_activation_shift": {
+      "metric": "1 - cos(mean resid[t0-w:t0], mean resid[t1+1:t1+1+w]) at layers {15,19,23}, windows {8,16,32} (primary 16); controls are sentence-start pseudo-spans, decile-matched, clear of all events",
+      "inference": "chain-level sign-flip permutation; significant iff p < 0.01 at the primary window",
+      "aurocs": "direction-projection at onset and shift magnitude vs wrong_to_right / flipped labels"
+    }
+  },
+  "decision_rules": {
+    "sufficient": "delta = acc(arm) - acc(in-family reference) >= +0.30 on the held-out test split, AND insert_filler / the manipulation-check-passing dose shows the effect is specific (filler within ±0.10 of reference)",
+    "not_sufficient": "TOST equivalence within ±0.10 on the test split for every correction arm that passes its manipulation check",
+    "inconclusive": "anything else (e.g. no arm passes the manipulation check at any dose)"
+  },
+  "splits": "same deterministic pilot/test chain split as the necessity test (pilot_fraction=0.3, split_seed=17); test split examined only after this file was written",
+  "seeds": "continuation base_seed=91, K=8, shared across all arms of a family",
+  "interpretation_notes": [
+    "wrong_point deltas are ceiling-bounded by the natural rescue rate; failed_chain is the primary sufficiency estimand",
+    "induction-without-accuracy-gain (markers induced, answers unchanged) counts as evidence FOR decorative: the signal is producible but not answer-relevant",
+    "a positive insert_correction effect that appears ONLY for v=assert_mistake and not v=soft_recheck/v=minimal_marker indicates the INFORMATION 'an error exists' helps, not the verbalization form"
+  ]
+}

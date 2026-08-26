@@ -1,0 +1,55 @@
+{
+  "run_dir": "results/exp1",
+  "config_sha256": "d70bd7dfb300abed98d515dc9fdea5e92354c351053a51717303ae870ba6269d",
+  "file_digests": {
+    "prereg_sufficiency.json": {
+      "sha256": "75d190d47665c2f600811631470b16b48625b4cbca9baa271f753731046bd510",
+      "bytes": 3468
+    },
+    "necessity_summary.json": {
+      "sha256": "917b000e31dd93c8052b060f563e4ac9e08777c78885912caefc094898189267",
+      "bytes": 616
+    },
+    "sufficiency_meta.json": {
+      "sha256": "70da3e52304d9370fed28ef98d4382db7b608361fec5c08165abc9e93f361f5c",
+      "bytes": 203
+    },
+    "event_summary.json": {
+      "sha256": "d582811afad77561a1314032f7579de14adce2b25d4d7201e16c528f013d9f7d",
+      "bytes": 583
+    },
+    "trajectory_summary.json": {
+      "sha256": "5ec9be8d353dbc135440cfe6d7027c4de18bdf1df04d38373555bb9e9b55302e",
+      "bytes": 170
+    },
+    "analysis/stat_tests.json": {
+      "sha256": "bb550a37c43f9fe29aae92baaacc1695a6477b540e7bbd7c065aa83e56d68fc0",
+      "bytes": 50490
+    },
+    "analysis/activation_shift.json": {
+      "sha256": "189a2e47bdee2c6852b3d3040c93dd967eeb596093a12eb1f59d68e42bba3714",
+      "bytes": 8532
+    },
+    "analysis/event_validation_summary.json": {
+      "sha256": "94e578c2dd1766e41f4acf1990513bac72d0d000c33f48a6348592546d811896",
+      "bytes": 524
+    }
+  },
+  "manifests_present": [
+    "01_generate_chains",
+    "02_detect_events",
+    "03_select_features",
+    "04_run_trajectory",
+    "05_run_necessity_test",
+    "06_analyze",
+    "07_direction_sweep",
+    "09_stat_tests",
+    "10_excision_test",
+    "15_provenance"
+  ],
+  "manifests_missing_for_completed_stages": [
+    "11_insertion_text",
+    "13_activation_shift"
+  ],
+  "note": "A digest pins WHAT was registered, not WHEN. Publish it with the paper so later edits to the registered rules are detectable. Stages listed as missing a manifest produced outputs in this directory but their manifest was not pulled from the machine that ran them \u2014 the config behind those rows is unrecorded here."
+}

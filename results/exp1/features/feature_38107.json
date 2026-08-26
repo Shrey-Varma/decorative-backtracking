@@ -1,0 +1,125 @@
+{
+  "feature_id": 38107,
+  "top_examples": [
+    {
+      "chain_id": "math500__73__c0",
+      "activation": 25.724639892578125,
+      "token_text": "Wait",
+      "context": " a + something)/sqrt(ab - b + something else).\n\nWait, but no, it's as defined.\n\nWait, perhaps I made a mistake in the test case.\n\nWait, when a=2, b=3:\n\nab + a=6 + 2"
+    },
+    {
+      "chain_id": "math500__73__c0",
+      "activation": 24.394071578979492,
+      "token_text": "Wait",
+      "context": "a(b +1))/(a(b -1)) )\n\nWhich is sqrt( (b +1)/(b -1) )\n\nYes, that seems correct.\n\nWait, maybe the problem is that I'm treating the numerator and denominator as separa"
+    },
+    {
+      "chain_id": "math500__123__c0",
+      "activation": 24.384963989257812,
+      "token_text": "Wait",
+      "context": "hen back to (0,3). So it's a trapezoid-like shape but not exactly a trapezoid.\n\nWait, maybe using the shoelace formula is the most reliable here, and since it gave "
+    },
+    {
+      "chain_id": "math500__73__c0",
+      "activation": 24.354698181152344,
+      "token_text": "Wait",
+      "context": "(a(b -1)) )=sqrt( (b +1)/(b -1) )\n\nBut in the test case, this is not matching.\n\nWait, unless I'm making a mistake in thinking that sqrt(ab +a)/sqrt(ab -b)=sqrt( (b "
+    },
+    {
+      "chain_id": "math500__130__c3",
+      "activation": 24.04867935180664,
+      "token_text": "Wait",
+      "context": "rhaps because I misapplied the modulus when breaking down the negative number.\n\nWait, if I have -11213141, which is -1*10^7 -1*10^6 -2*10^5 -1*10^4 -3*10^3 -1*10^2 "
+    },
+    {
+      "chain_id": "math500__130__c3",
+      "activation": 23.727170944213867,
+      "token_text": "Wait",
+      "context": " -7 mod18=11.\n\nBut in the first method, I get13.\n\nWait, so there's a conflict.\n\nWait, perhaps I made a mistake in the first method.\n\nWait, let me compute the sum of"
+    },
+    {
+      "chain_id": "math500__164__c2",
+      "activation": 23.33847999572754,
+      "token_text": "Wait",
+      "context": " not quite.\n\nAlternatively, maybe I can use the identity for a sum of cosines.\n\nWait, 1 + 4 cos \u03b8 = 1 + 2 cos \u03b8 + 2 cos \u03b8. Hmm, not helpful.\n\nAlternatively, perhaps"
+    },
+    {
+      "chain_id": "math500__152__c0",
+      "activation": 23.328929901123047,
+      "token_text": "Wait",
+      "context": ") in terms of known quantities?\n\nWait, unless I can find c in terms of b or d.\n\nWait, in the coordinate system, the centroid is at ((2/3)(b + c), (2d)/3). Is there "
+    },
+    {
+      "chain_id": "math500__137__c1",
+      "activation": 23.30382537841797,
+      "token_text": "Wait",
+      "context": " be the correct quotient.\n\nTherefore, I must have messed up the long division.\n\nWait, maybe I need to think of the divisor as 2_5 and the dividend as 413_5, but in "
+    },
+    {
+      "chain_id": "math500__154__c3",
+      "activation": 23.25320053100586,
+      "token_text": "Wait",
+      "context": " and the fly ending at (12,9,1), and find the shortest path over the surfaces.\n\nWait, perhaps the shortest path is a combination of moving along the back wall, ceil"
+    },
+    {
+      "chain_id": "math500__137__c1",
+      "activation": 23.112224578857422,
+      "token_text": "Wait",
+      "context": " need to think of the divisor as 2_5 and the dividend as 413_5, but in base 5.\n\nWait, perhaps I should perform the multiplication and addition in base 5.\n\nSo, 2_5 *"
+    },
+    {
+      "chain_id": "math500__92__c1",
+      "activation": 22.856367111206055,
+      "token_text": "Wait",
+      "context": "that's 0.00458752\u22480.45875%.\n\nBut that's conflicting with the binomial formula.\n\nWait, so perhaps the problem is that when I compute (1/5)^4*(4/5)^3, it's not 0.0002"
+    },
+    {
+      "chain_id": "math500__9__c3",
+      "activation": 22.83210563659668,
+      "token_text": "Wait",
+      "context": "f we can group the addition with different parts, the result can be different.\n\nWait, as I thought before, when grouping the addition with different parts, either t"
+    },
+    {
+      "chain_id": "math500__164__c2",
+      "activation": 22.792104721069336,
+      "token_text": "Wait",
+      "context": "\n\nAlternatively, maybe I can use the formula for the sum of a sine and cosine.\n\nWait, I have sin \u03b8 * (1 + 4 cos \u03b8) / cos \u03b8.\n\nLet me write that as sin \u03b8 * (1 + 4 cos"
+    },
+    {
+      "chain_id": "math500__152__c0",
+      "activation": 22.72004508972168,
+      "token_text": "Wait",
+      "context": "fy bd = 72, and compute (b + c).\n\nWait, but without knowing c, it's difficult.\n\nWait, maybe I can use the fact that in triangle ABC, the centroid divides the median"
+    },
+    {
+      "chain_id": "math500__130__c3",
+      "activation": 22.543376922607422,
+      "token_text": "Wait",
+      "context": "3.\n\nWait, but according to the division method, it's11.\n\nSo, which is correct?\n\nWait, is my first method wrong?\n\nWait, let me try to compute -11213141 divided by18."
+    },
+    {
+      "chain_id": "math500__22__c1",
+      "activation": 22.505775451660156,
+      "token_text": "Wait",
+      "context": "er group, but the problem says \"paid for each dog they walk,\" so it's per dog.\n\nWait, perhaps I need to think in terms of the total pay.\n\nLet me denote Denali's pay"
+    },
+    {
+      "chain_id": "math500__83__c3",
+      "activation": 22.469566345214844,
+      "token_text": "Wait",
+      "context": "hen zero.\n\nWait, but 9^x +19 -10^x, so it's a combination of two exponentials.\n\nWait, perhaps h(x) is not monotonic, so it can have multiple roots.\n\nTherefore, the "
+    },
+    {
+      "chain_id": "math500__164__c2",
+      "activation": 22.419593811035156,
+      "token_text": "Wait",
+      "context": " so that's consistent.\n\nAlternatively, perhaps I can find an exact expression.\n\nWait, going back, I had:\n\n[2 sin 20\u00b0 - sin 80\u00b0] / cos 80\u00b0 \u2248 -1.732\n\nBut 2 sin 20\u00b0 - "
+    },
+    {
+      "chain_id": "math500__154__c2",
+      "activation": 22.34649658203125,
+      "token_text": "Wait",
+      "context": "s the ceiling to the fly's position on the right wall, but in a different way.\n\nWait, but the fly is on the right wall, one foot from the front. So, if the gecko go"
+    }
+  ]
+}

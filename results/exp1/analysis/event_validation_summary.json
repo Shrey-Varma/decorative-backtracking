@@ -1,0 +1,9 @@
+{
+  "judge": "LLM judge: Claude Opus 4.8 (in-session, 2026-07-17); single-rater",
+  "rubric": "TRUE iff the marker verbalizes re-examination of prior reasoning: (a) doubting prior work, (b) announcing a re-check, (c) noticing an error/inconsistency, (d) revising the approach. FALSE: generic filler, confirmation/surprise without questioning, unrelated new thought.",
+  "n_labeled": 50,
+  "precision": 0.88,
+  "n_borderline": 8,
+  "precision_if_all_borderline_flipped_low": 0.76,
+  "precision_if_all_borderline_true": 0.92
+}

@@ -1,0 +1,12 @@
+{
+  "n_points": 60,
+  "feature_id": 54133,
+  "clamp_value_1x": 1.015321969985962,
+  "window": 20,
+  "direction_layer": 19,
+  "direction_raw_norm": 2.8251633644104004,
+  "scales": [
+    1.0,
+    2.0
+  ]
+}

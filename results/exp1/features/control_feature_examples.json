@@ -1,0 +1,122 @@
+[
+  {
+    "chain_id": "math500__178__c2",
+    "activation": 6.295989513397217,
+    "token_text": "10",
+    "context": " number:\n\n10 = 2 \u00d7 5\n\n15 = 3 \u00d7 5\n\n24 = 2^3 \u00d7 3\n\nSo, multiplying them together:\n\n10 \u00d7 15 \u00d7 24 = (2 \u00d7 5) \u00d7 (3 \u00d7 5) \u00d7 (2^3 \u00d7 3)\n\nNow, let's combine the like terms:\n\n"
+  },
+  {
+    "chain_id": "math500__181__c1",
+    "activation": 6.167491912841797,
+    "token_text": " inner",
+    "context": " So, sqrt(729) is 27. Therefore, sqrt(1/729) is 1/27.\n\nAlright, so replacing the innermost square root, the expression becomes:\n\n$$\\sqrt{\\sqrt[3]{\\frac{1}{27}}}$$\n\nNo"
+  },
+  {
+    "chain_id": "math500__4__c0",
+    "activation": 5.289402008056641,
+    "token_text": " As",
+    "context": ", Briana, Carla, Debra, and Angela. The coordinates of each dot are given in the Asymptote code, so I can extract those.\n\nLet me note down the coordinates:\n\n- Evel"
+  },
+  {
+    "chain_id": "math500__181__c1",
+    "activation": 5.274231433868408,
+    "token_text": "most",
+    "context": "qrt(729) is 27. Therefore, sqrt(1/729) is 1/27.\n\nAlright, so replacing the innermost square root, the expression becomes:\n\n$$\\sqrt{\\sqrt[3]{\\frac{1}{27}}}$$\n\nNow, m"
+  },
+  {
+    "chain_id": "math500__67__c2",
+    "activation": 5.118980884552002,
+    "token_text": " decreasing",
+    "context": "hing by 40% means you're left with 60% of the original. So, 40% of s is 0.4s, so decreasing by that would leave us with s - 0.4s = 0.6s. So, those two sides become 0.6s ea"
+  },
+  {
+    "chain_id": "math500__154__c3",
+    "activation": 5.06990385055542,
+    "token_text": " back",
+    "context": "which is on the back wall, one foot from the ceiling (z=7) and one foot from the back wall (y=9). So, in the net, that would be at (0,9). Wait, but the back wall in "
+  },
+  {
+    "chain_id": "math500__67__c0",
+    "activation": 4.977351665496826,
+    "token_text": "40",
+    "context": " right? So, the new length of those two sides will be the original length minus 40% of it. So that's s - 0.4*s, which simplifies to 0.6*s. So, 0.6 times s is the "
+  },
+  {
+    "chain_id": "math500__94__c3",
+    "activation": 4.863199234008789,
+    "token_text": "ise",
+    "context": " x \\), then angle \\( BAF \\) would be \\( 2x \\), since it's the angle after two trisection lines.\n\nWait, that might make sense. If \\( BAF \\) is 110 degrees, then \\( "
+  },
+  {
+    "chain_id": "math500__71__c1",
+    "activation": 4.801145076751709,
+    "token_text": "right",
+    "context": " number again:\n\n1 0 1 0 1 0 0 1 1 1 0\n\nIf I group from the right:\n\nFirst group (rightmost): 110\n\nSecond group: 011\n\nThird group: 101\n\nFourth group: 010\n\nBut wait, 1 "
+  },
+  {
+    "chain_id": "math500__181__c1",
+    "activation": 4.712447643280029,
+    "token_text": " inner",
+    "context": "kle each root one by one, starting from the innermost.\n\nFirst, let's compute the innermost part: the square root of 1/729. I know that the square root of a fraction i"
+  },
+  {
+    "chain_id": "math500__180__c0",
+    "activation": 4.696595668792725,
+    "token_text": " prime",
+    "context": "e the lowest power of all common prime factors. Both 100 and 150 have 2 and 5 as prime factors. For 2, the lowest power is 2^1 (since 100 has 2^2 and 150 has 2^1). Fo"
+  },
+  {
+    "chain_id": "math500__4__c0",
+    "activation": 4.597963333129883,
+    "token_text": "ote",
+    "context": "ple, is the graph perhaps cumulative distance over time? Wait, but in the Asymptote code, it's just individual points. So, each student's run is represented by a s"
+  },
+  {
+    "chain_id": "math500__124__c3",
+    "activation": 4.586165428161621,
+    "token_text": " critical",
+    "context": "ro when 3x - 6 = 0, which is x = 2. So, another critical point is x = 2. \n\nThese critical points divide the real number line into different intervals where the expressio"
+  },
+  {
+    "chain_id": "math500__71__c1",
+    "activation": 4.431180953979492,
+    "token_text": " right",
+    "context": "\n\n1 0 1 0 1 0 0 1 1 1 0\n\nStarting from the right, the first three digits are the rightmost. So, let's split them:\n\nStarting from the right:\n- The last three digits: 1"
+  },
+  {
+    "chain_id": "math500__4__c0",
+    "activation": 4.340700149536133,
+    "token_text": " As",
+    "context": "total time for the run or if these are some intermediate points.\n\nLooking at the Asymptote code, the x-axis is labeled \"time\" and the y-axis is labeled \"distance.\""
+  },
+  {
+    "chain_id": "math500__154__c2",
+    "activation": 4.331680774688721,
+    "token_text": " one",
+    "context": ".\n\nThe gecko is on the left side wall, one foot from the back, which is y=10, so one foot from the back is y=9, and one foot from the ceiling, which is z=8, so one "
+  },
+  {
+    "chain_id": "math500__154__c3",
+    "activation": 4.299402236938477,
+    "token_text": " back",
+    "context": "is on the back wall (x=0), one foot from the ceiling (z=7) and one foot from the back wall (y=9). So, gecko's position is (0, 9, 7). The fly is on the front wall (x="
+  },
+  {
+    "chain_id": "math500__129__c1",
+    "activation": 4.266561508178711,
+    "token_text": " foot",
+    "context": "f the altitude from C to AB. Since AB is on the x-axis from (0,0) to (17,0), the foot D will have the same x-coordinate as C if I drop a perpendicular to AB. Wait, n"
+  },
+  {
+    "chain_id": "math500__177__c2",
+    "activation": 4.256887912750244,
+    "token_text": " Q",
+    "context": "angle PQS would have sides PQ, PS, and QS. Since Q and S are 4 units apart (from Q at -2,0 and S at 2,0, the distance is 4), and PQ and PS are both 2 units each. "
+  },
+  {
+    "chain_id": "math500__71__c1",
+    "activation": 4.223672389984131,
+    "token_text": "right",
+    "context": "0 1 0 1 0 0 1 1 1 0\n\nCounting from the right, three digits at a time:\n\nGroup 1 (rightmost): 110\nGroup 2: 011\nGroup 3: 101\nGroup 4: 010\n\nWait, but wait, 11 digits, so"
+  }
+]

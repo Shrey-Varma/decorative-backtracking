@@ -1,0 +1,25 @@
+generation:
+  think_open: "<think>"
+  think_close: "</think>"
+
+  chain:                        # initial chain generation (fast backend)
+    n_chains_per_problem: 4
+    temperature: 0.6
+    top_p: 0.95
+    max_new_tokens: 8192
+    base_seed: 1234
+
+  continuation:                 # interventional continuations (TL backend)
+    n_continuations: 8          # K seeded continuations per condition
+    temperature: 0.6
+    top_p: 0.95
+    max_new_tokens: 4096
+    base_seed: 91
+    # stop early once a boxed answer appears after the think block closes
+    early_stop_regex: "\\\\boxed\\{[^{}]*\\}"
+    early_stop_check_every: 32
+
+  probe:                        # force-answer probe (§6) — fixed across ALL probes
+    template: "\n</think>\n\nFinal Answer: \\boxed{"
+    max_new_tokens: 24
+    stop_string: "}"

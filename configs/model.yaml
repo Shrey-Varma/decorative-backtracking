@@ -1,0 +1,21 @@
+model:
+  model_name: deepseek-ai/DeepSeek-R1-Distill-Llama-8B
+  model_revision: null          # pin the exact HF revision before a real run
+  # TL scaffold: upstream TransformerLens doesn't register the R1 distills, so
+  # we mount the DeepSeek weights on the architecturally-identical Llama-3.1-8B
+  # (see model_loading.load_tl_model). null would use model_name directly.
+  tl_model_name: meta-llama/Llama-3.1-8B
+  dtype: bfloat16
+  device: cuda
+  # Fast backend for bulk, NON-interventional generation (stages 01, 04).
+  # Interventional continuations (stage 05) always run on TransformerLens —
+  # vLLM cannot execute residual-stream hooks (§2 backend split).
+  fast_backend: vllm            # vllm | hf (fallback if vLLM unavailable)
+  sae:
+    repo_id: andreuka18/deepseek-r1-distill-llama-8b-lmsys-openthoughts
+    # sae_id addresses the SAE *within the repo* (folder / registry id). The
+    # actual hook_name / hook_layer are read from the loaded SAE config at
+    # runtime (model_loading.get_sae_hook_info) — never hardcoded downstream.
+    sae_id: blocks.19.hook_resid_post
+    revision: null              # pin before a real run
+    dtype: float32

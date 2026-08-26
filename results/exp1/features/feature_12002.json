@@ -1,0 +1,125 @@
+{
+  "feature_id": 12002,
+  "top_examples": [
+    {
+      "chain_id": "math500__32__c2",
+      "activation": 10.272555351257324,
+      "token_text": "Hmm",
+      "context": "20 ways. But wait, that's only 120, but earlier I had 720. That doesn't match.\n\nHmm, that's a discrepancy. So, which is correct? Is it 120 or 720?\n\nWait, no. If I "
+    },
+    {
+      "chain_id": "math500__57__c3",
+      "activation": 9.467328071594238,
+      "token_text": "Okay",
+      "context": "-4)^2) = sqrt(16) = 4.\n\nSimilarly, (1 - i)^8 = (-4)^2 = 16. So, modulus is 16.\n\nOkay, that's consistent with my previous result. So, whether I use polar form with D"
+    },
+    {
+      "chain_id": "math500__120__c0",
+      "activation": 9.252979278564453,
+      "token_text": "Wait",
+      "context": "\\). Therefore, \\( f(m(x)) = -f(m(x)) \\), which implies that \\( f(m(x)) = 0 \\).\n\nWait, that can't be right unless \\( m(x) \\) is zero, which it isn't necessarily. Hmm"
+    },
+    {
+      "chain_id": "math500__11__c3",
+      "activation": 9.113964080810547,
+      "token_text": "So",
+      "context": "gging in n=1, I found c. Then, using that, I found p(8). So, that seems solid.\n\nSo, I think the answer is 1/9.\n\n**Final Answer**\n\\boxed{\\dfrac{1}{9}}\n</think>\n\nGi"
+    },
+    {
+      "chain_id": "math500__83__c3",
+      "activation": 8.984508514404297,
+      "token_text": "Wait",
+      "context": "hat suggests that there might be another crossing point between 1.95 and 1.99.\n\nWait, but earlier, I thought that at \\(x=2\\), left side equals right side, and for \\"
+    },
+    {
+      "chain_id": "math500__108__c0",
+      "activation": 8.925680160522461,
+      "token_text": "Hmm",
+      "context": " which simplifies to \\( -1 = 0 \\). That's impossible. So, that can't be right.\n\nHmm, so maybe my assumption that the circle is centered at the origin is incorrect."
+    },
+    {
+      "chain_id": "math500__138__c1",
+      "activation": 8.855752944946289,
+      "token_text": "I",
+      "context": " 5 for all colors, which gives 5/30 = 1/6.\n\nTherefore, the probability is 1/6.\n\nI think that's correct. Let me see if there's another way to think about it.\n\nSup"
+    },
+    {
+      "chain_id": "math500__126__c3",
+      "activation": 8.837455749511719,
+      "token_text": "Wait",
+      "context": "i - \\sqrt{10} \\left( \\frac{\\sqrt{2}}{2} - i \\frac{\\sqrt{2}}{2} \\right) }{2} \\)\n\nWait, this seems confusing. Maybe I should compute both roots explicitly.\n\nFirst, le"
+    },
+    {
+      "chain_id": "math500__128__c2",
+      "activation": 8.693684577941895,
+      "token_text": "Wait",
+      "context": "each day. So, maybe she can adjust her walks to walk fewer miles on some days?\n\nWait, but the problem says she walks four miles every third day. So, that might mean"
+    },
+    {
+      "chain_id": "math500__120__c0",
+      "activation": 8.642967224121094,
+      "token_text": "Wait",
+      "context": "it, that can't be right unless \\( k(x) \\) is zero, which it isn't necessarily.\n\nWait, maybe I made a mistake here. Let's take it step by step.\n\nLet me denote \\( f(k"
+    },
+    {
+      "chain_id": "math500__162__c3",
+      "activation": 8.437756538391113,
+      "token_text": "Wait",
+      "context": "e same. Hmm, but 1/3 is approximately 0.333, which is slightly less than 0.34.\n\nWait, that discrepancy is because 100 isn't a multiple of 6, so the exact count isn'"
+    },
+    {
+      "chain_id": "math500__138__c1",
+      "activation": 8.333946228027344,
+      "token_text": "I",
+      "context": "me color for the bags to remain identical.\n\nTherefore, the probability is 1/6.\n\nI think I've thought about this from multiple angles, and each time I come up wit"
+    },
+    {
+      "chain_id": "math500__115__c1",
+      "activation": 8.302421569824219,
+      "token_text": "Wait",
+      "context": "{8!}{2! \\times 2! \\times 2!}\n\\]\n\nWhich is 8! / (2 \u00d7 2 \u00d7 2) = 40320 / 8 = 5040.\n\nWait, hold on. Now I'm confused because earlier I thought only E and L were repeatin"
+    },
+    {
+      "chain_id": "math500__164__c2",
+      "activation": 8.296772003173828,
+      "token_text": "Wait",
+      "context": "s negative, around -0.1763. So, adding them together: 3.939 - 0.1763 \u2248 3.7627.\n\nWait, that's a positive value, about 3.76. So, my earlier numerical approximation wh"
+    },
+    {
+      "chain_id": "math500__138__c1",
+      "activation": 8.295159339904785,
+      "token_text": "Yes",
+      "context": " = 1/30. Since there are five colors, the total probability is 5*(1/30) = 1/6.\n\nYes, that seems consistent.\n\nAlternatively, maybe we can think of the entire proces"
+    },
+    {
+      "chain_id": "math500__74__c3",
+      "activation": 8.26602840423584,
+      "token_text": "ems",
+      "context": "fies to \\(\\frac{\\cos^2 x}{\\cos x \\sin x} = \\frac{\\cos x}{\\sin x} = \\cot x\\).\n\nSeems like I didn't make any errors. So, the simplified form of the expression is ind"
+    },
+    {
+      "chain_id": "math500__153__c0",
+      "activation": 8.252395629882812,
+      "token_text": "But",
+      "context": "n a straight line is 8. So, the probability is 8/84, which simplifies to 2/21.\n\nBut hold on, I just recalled that sometimes in these grid problems, people also cou"
+    },
+    {
+      "chain_id": "math500__76__c1",
+      "activation": 8.231233596801758,
+      "token_text": "Wait",
+      "context": " is positive for any x \u2260 0, so log(x squared) should be defined for all x \u2260 0.\n\nWait, so is log(x squared) equal to 2 log x? Or is it equal to log(x squared)?\n\nLet "
+    },
+    {
+      "chain_id": "math500__115__c1",
+      "activation": 8.227181434631348,
+      "token_text": "So",
+      "context": "2! \u00d7 2! = 8. Therefore, the number of unique arrangements is 40320 / 8 = 5040.\n\nSo, my initial mistake was not noticing that P also appears twice. So, in my first"
+    },
+    {
+      "chain_id": "math500__142__c3",
+      "activation": 8.160204887390137,
+      "token_text": "So",
+      "context": "ments would be 2 (for the order of blocks) \u00d7 5! \u00d7 5! = 2 \u00d7 120 \u00d7 120 = 28,800.\n\nSo, same answer. So, that's consistent.\n\nAlternatively, if I didn't fix the Indepe"
+    }
+  ]
+}

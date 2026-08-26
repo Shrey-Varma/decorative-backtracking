@@ -1,0 +1,167 @@
+{
+  "timestamp": "2026-07-12T09:28:00.853221+00:00",
+  "config_hash": "5ff3e30cf7cc",
+  "git_sha": null,
+  "argv": [
+    "scripts/03_select_features.py",
+    "--run-dir",
+    "runs/exp1",
+    "--set",
+    "experiment.necessity.max_informative_events=60"
+  ],
+  "package_versions": {
+    "python": "3.10.12",
+    "torch": "2.11.0+cu130",
+    "transformers": "5.13.0",
+    "transformer_lens": "not-installed",
+    "sae_lens": "6.45.3",
+    "numpy": "2.2.6"
+  },
+  "config": {
+    "run_name": null,
+    "model": {
+      "model_name": "deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
+      "model_revision": null,
+      "tl_model_name": "meta-llama/Llama-3.1-8B",
+      "dtype": "bfloat16",
+      "device": "cuda",
+      "fast_backend": "vllm",
+      "tl_n_ctx": 16384,
+      "sae": {
+        "repo_id": "andreuka18/deepseek-r1-distill-llama-8b-lmsys-openthoughts",
+        "sae_id": "blocks.19.hook_resid_post",
+        "revision": null,
+        "dtype": "float32"
+      }
+    },
+    "generation": {
+      "think_open": "<think>",
+      "think_close": "</think>",
+      "chain": {
+        "n_chains_per_problem": 4,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_new_tokens": 8192,
+        "base_seed": 1234
+      },
+      "continuation": {
+        "n_continuations": 8,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_new_tokens": 4096,
+        "early_stop_regex": "\\\\boxed\\{[^{}]*\\}",
+        "early_stop_check_every": 32,
+        "base_seed": 91
+      },
+      "probe": {
+        "template": "\n</think>\n\nFinal Answer: \\boxed{",
+        "max_new_tokens": 24,
+        "stop_string": "}"
+      }
+    },
+    "experiment": {
+      "output_dir": "runs",
+      "datasets": [
+        {
+          "name": "math500",
+          "hf_path": "HuggingFaceH4/MATH-500",
+          "split": "test",
+          "problem_field": "problem",
+          "answer_field": "answer",
+          "id_field": null,
+          "limit": 200
+        }
+      ],
+      "events": {
+        "lexicon": [
+          "wait",
+          "wait,",
+          "wait.",
+          "hold on",
+          "hmm",
+          "actually",
+          "no, wait",
+          "oh wait",
+          "but wait",
+          "on second thought",
+          "let me reconsider",
+          "let me recheck",
+          "let me re-check",
+          "let me double-check",
+          "let me double check",
+          "let me re-examine",
+          "let me rethink",
+          "let me verify",
+          "that's wrong",
+          "that's not right",
+          "that is wrong",
+          "that can't be right",
+          "i made a mistake",
+          "i made an error",
+          "i think i made a mistake",
+          "scratch that",
+          "correction:",
+          "oops",
+          "my mistake",
+          "this is incorrect",
+          "that doesn't seem right",
+          "that seems off"
+        ],
+        "max_span_tokens": 24,
+        "merge_gap_tokens": 4,
+        "min_onset_gap_tokens": 16,
+        "validation_sample": 50
+      },
+      "features": {
+        "n_candidate_features": 5,
+        "corpus_max_chains": 200,
+        "nonmarker_per_marker": 1,
+        "position_match_bins": 10,
+        "prewindow_tokens": 4,
+        "activation_batch_tokens": 4096,
+        "top_examples_per_feature": 20
+      },
+      "trajectory": {
+        "stride": 32,
+        "align_window_tokens": 8
+      },
+      "necessity": {
+        "ablation_mode": "zero",
+        "secondary_ablation_modes": [
+          "mean"
+        ],
+        "position_mask": "event_onward",
+        "secondary_position_masks": [
+          "event_only"
+        ],
+        "ablate_top_k_jointly": false,
+        "n_candidates_to_test": 1,
+        "control_feature": "matched",
+        "control_feature_seed": 0,
+        "min_control_pos_distance": 32,
+        "max_informative_events": 60
+      },
+      "splits": {
+        "pilot_fraction": 0.3,
+        "split_seed": 17
+      },
+      "decision_rule": {
+        "min_delta": 0.3,
+        "max_control_delta": 0.1,
+        "min_net_revert_rate": 0.5
+      },
+      "analysis": {
+        "n_bootstrap": 2000,
+        "ci": 0.95,
+        "bootstrap_seed": 7,
+        "include_test_split": false
+      },
+      "verifier": {
+        "enabled": false,
+        "base_url": null,
+        "model": null,
+        "api_key_env": "OPENAI_API_KEY"
+      }
+    }
+  }
+}

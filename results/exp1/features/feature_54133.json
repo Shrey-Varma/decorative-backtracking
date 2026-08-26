@@ -1,0 +1,125 @@
+{
+  "feature_id": 54133,
+  "top_examples": [
+    {
+      "chain_id": "math500__123__c0",
+      "activation": 7.205442905426025,
+      "token_text": " no",
+      "context": "'s wrong here.\n\nWait, why is there a discrepancy? Let me figure this out.\n\nWait, no, actually, when I split the quadrilateral into D B E and B E F, the two triangl"
+    },
+    {
+      "chain_id": "math500__108__c2",
+      "activation": 6.4661545753479,
+      "token_text": ",",
+      "context": "t, that's conflicting with what I thought earlier. Let me think again.\n\nWait, no, if \\( y = 0 \\), then the tangent line is horizontal only if the derivative is 0"
+    },
+    {
+      "chain_id": "math500__177__c2",
+      "activation": 6.46163272857666,
+      "token_text": " no",
+      "context": "culation, it's sqrt(12). That doesn't make sense. Maybe I made a mistake.\n\nWait, no. P is the center of the circle tangent to Q and S. Since all circles have radiu"
+    },
+    {
+      "chain_id": "math500__108__c2",
+      "activation": 6.348475456237793,
+      "token_text": " no",
+      "context": "Wait, that's conflicting with what I thought earlier. Let me think again.\n\nWait, no, if \\( y = 0 \\), then the tangent line is horizontal only if the derivative is "
+    },
+    {
+      "chain_id": "math500__123__c1",
+      "activation": 6.308895587921143,
+      "token_text": " no",
+      "context": "F, we have to make sure that these two triangles don't overlap.\n\nWait, actually, no. D-B-E-F is a quadrilateral, so splitting it into D-B-E and E-F-D is correct be"
+    },
+    {
+      "chain_id": "math500__122__c0",
+      "activation": 6.297768592834473,
+      "token_text": " no",
+      "context": "s 9. Hmm, something's not adding up here. Wait, no, wait, let me clarify.\n\nWait, no, hold on. Wait, 15 / 1500 is 0.01, and if we set that equal to N2 / 2500, then "
+    },
+    {
+      "chain_id": "math500__123__c0",
+      "activation": 6.235971450805664,
+      "token_text": ",",
+      "context": "wrong here.\n\nWait, why is there a discrepancy? Let me figure this out.\n\nWait, no, actually, when I split the quadrilateral into D B E and B E F, the two triangle"
+    },
+    {
+      "chain_id": "math500__32__c2",
+      "activation": 6.217989444732666,
+      "token_text": " no",
+      "context": "tion, I'm effectively reducing the number of units from 6 to 5? No, wait.\n\nWait, no. If I fix Pierre's position, then the block is fixed in position, but the rest "
+    },
+    {
+      "chain_id": "math500__125__c1",
+      "activation": 6.1999006271362305,
+      "token_text": " no",
+      "context": " 3.6 squared. Hmm, that's a bit confusing. Maybe I should parse it again.\n\nWait, no, actually, let me read the problem again carefully: \"Evaluate \u23a1(3.6)\u00b2\u23a4 - (\u23a13.6\u23a4"
+    },
+    {
+      "chain_id": "math500__9__c3",
+      "activation": 6.103070259094238,
+      "token_text": " case",
+      "context": "dition is different, the number of distinct values is limited.\n\nWait, but in our case, the addition is at the end, so the different groupings only affect how much is"
+    },
+    {
+      "chain_id": "math500__125__c1",
+      "activation": 5.985681056976318,
+      "token_text": ",",
+      "context": "6 squared. Hmm, that's a bit confusing. Maybe I should parse it again.\n\nWait, no, actually, let me read the problem again carefully: \"Evaluate \u23a1(3.6)\u00b2\u23a4 - (\u23a13.6\u23a4)"
+    },
+    {
+      "chain_id": "math500__120__c0",
+      "activation": 5.894786834716797,
+      "token_text": " no",
+      "context": "fic example, it's not zero, so that suggests that my assumption is wrong.\n\nWait, no, in my specific example, \\( f(x) = x \\), which is odd, and \\( g(x) = x^2 \\), wh"
+    },
+    {
+      "chain_id": "math500__123__c0",
+      "activation": 5.810712814331055,
+      "token_text": " actually",
+      "context": "rong here.\n\nWait, why is there a discrepancy? Let me figure this out.\n\nWait, no, actually, when I split the quadrilateral into D B E and B E F, the two triangles might n"
+    },
+    {
+      "chain_id": "math500__125__c1",
+      "activation": 5.740506172180176,
+      "token_text": " me",
+      "context": " that's a bit confusing. Maybe I should parse it again.\n\nWait, no, actually, let me read the problem again carefully: \"Evaluate \u23a1(3.6)\u00b2\u23a4 - (\u23a13.6\u23a4)\u00b2.\" So, it's the "
+    },
+    {
+      "chain_id": "math500__115__c3",
+      "activation": 5.6779279708862305,
+      "token_text": " no",
+      "context": "tributing to the denominator.\n\nWait, is that correct? Let me think again.\n\nWait, no, actually, the counts should be for each letter. So, since E appears twice, tha"
+    },
+    {
+      "chain_id": "math500__120__c0",
+      "activation": 5.553858757019043,
+      "token_text": ",",
+      "context": " example, it's not zero, so that suggests that my assumption is wrong.\n\nWait, no, in my specific example, \\( f(x) = x \\), which is odd, and \\( g(x) = x^2 \\), whi"
+    },
+    {
+      "chain_id": "math500__32__c2",
+      "activation": 5.540287494659424,
+      "token_text": " no",
+      "context": "atch.\n\nHmm, that's a discrepancy. So, which is correct? Is it 120 or 720?\n\nWait, no. If I fix Pierre's position, then the block is fixed in position as well, but R"
+    },
+    {
+      "chain_id": "math500__37__c3",
+      "activation": 5.499719619750977,
+      "token_text": " case",
+      "context": "s it did before? Or is it not exactly the same?\n\nWait, no, that might not be the case. Because when you rotate a shape, it's not just the vertices moving to the next"
+    },
+    {
+      "chain_id": "math500__128__c2",
+      "activation": 5.432582378387451,
+      "token_text": " no",
+      "context": "hat contradicts our earlier result of 36 miles. Hmm, so which is correct?\n\nWait, no, hold on. If in a week, she walks two sets, that's 8 miles, but in reality, 7 d"
+    },
+    {
+      "chain_id": "math500__43__c1",
+      "activation": 5.415447235107422,
+      "token_text": " no",
+      "context": " it's just the distance from \\((x, 0)\\) to \\((0, 20)\\) or something else.\n\nWait, no. Maybe it's the distance from \\((x, y)\\) to two fixed points? Let me see. If I "
+    }
+  ]
+}

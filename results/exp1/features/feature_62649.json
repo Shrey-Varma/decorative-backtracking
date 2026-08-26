@@ -1,0 +1,125 @@
+{
+  "feature_id": 62649,
+  "top_examples": [
+    {
+      "chain_id": "math500__76__c1",
+      "activation": 7.42129373550415,
+      "token_text": "Wait",
+      "context": "o, so it's not just x < 0 or x > 0 because x can be greater than zero as well.\n\nWait, hold on. Let me clarify. If the domain is x < a or x > b, then the function is"
+    },
+    {
+      "chain_id": "math500__142__c1",
+      "activation": 6.73076868057251,
+      "token_text": ".\n\n",
+      "context": "dent is just a single person, not a block. So, perhaps I'm making a mistake here.\n\nWait, the problem says that all the members of each party must sit next to each "
+    },
+    {
+      "chain_id": "math500__76__c2",
+      "activation": 6.710110664367676,
+      "token_text": "?\n\n",
+      "context": "e greater than zero, and b must be less than zero? Or is it the other way around?\n\nWait, no. Let me visualize this. If I have x < a or x > b, and the function is u"
+    },
+    {
+      "chain_id": "math500__51__c2",
+      "activation": 6.528820037841797,
+      "token_text": "?\n\n",
+      "context": "ree 1, so the quotient should be degree 5. So, how come we have six coefficients?\n\nWait, perhaps I miscounted the number of coefficients. Let's see: the dividend i"
+    },
+    {
+      "chain_id": "math500__76__c1",
+      "activation": 6.301333427429199,
+      "token_text": ".\n\n",
+      "context": "zero, so it's not just x < 0 or x > 0 because x can be greater than zero as well.\n\nWait, hold on. Let me clarify. If the domain is x < a or x > b, then the functio"
+    },
+    {
+      "chain_id": "math500__162__c3",
+      "activation": 6.277846813201904,
+      "token_text": ".\n\n",
+      "context": " the same. Hmm, but 1/3 is approximately 0.333, which is slightly less than 0.34.\n\nWait, that discrepancy is because 100 isn't a multiple of 6, so the exact count "
+    },
+    {
+      "chain_id": "math500__23__c1",
+      "activation": 6.195799827575684,
+      "token_text": ".\n\n",
+      "context": "Factor: \\( (x - 1)(x - 5) = 0 \\)\n\nSolutions: 1 and 5. Checked both, only 5 works.\n\nWait, so is that all? Is there only one solution? Hmm. Let me see if I can visua"
+    },
+    {
+      "chain_id": "math500__76__c1",
+      "activation": 6.188018798828125,
+      "token_text": ".\n\n",
+      "context": " there might be some specific values a and b that define the domain in that form.\n\nHmm, maybe I'm missing something here. Let me write down what I know. The functi"
+    },
+    {
+      "chain_id": "math500__51__c2",
+      "activation": 6.0328545570373535,
+      "token_text": ".\n\n",
+      "context": "ial, but wait, the quotient should be fifth-degree. Hmm, that doesn't seem right.\n\nWait, hold on. Maybe I made a mistake in the process. Let me recount the coeffic"
+    },
+    {
+      "chain_id": "math500__142__c1",
+      "activation": 6.013503074645996,
+      "token_text": "Wait",
+      "context": "e treated as a separate block or if they can be inserted into the arrangement.\n\nWait, actually, in our earlier step, we considered each party as a block, so the thr"
+    },
+    {
+      "chain_id": "math500__142__c1",
+      "activation": 5.99536657333374,
+      "token_text": ".\n\n",
+      "context": " are treated as a separate block or if they can be inserted into the arrangement.\n\nWait, actually, in our earlier step, we considered each party as a block, so the"
+    },
+    {
+      "chain_id": "math500__76__c2",
+      "activation": 5.990924835205078,
+      "token_text": " So",
+      "context": "umbers except x = 0. But the problem states it as two intervals: x < a or x > b. So, if the domain is x < a or x > b, then a must be greater than zero, and b must "
+    },
+    {
+      "chain_id": "math500__162__c3",
+      "activation": 5.9674482345581055,
+      "token_text": "Wait",
+      "context": "102, which is more than 100. So, there are 16 numbers divisible by 6 up to 96.\n\nWait, but 96 is less than 100, so does that mean we have 16 numbers? Hmm, actually, "
+    },
+    {
+      "chain_id": "math500__33__c2",
+      "activation": 5.959779739379883,
+      "token_text": ".\n\n",
+      "context": "is 3/5, but the given fourth term is 3, not 3/5. So, maybe I made a mistake here.\n\nWait, let me double-check my calculations. The third term is 5, and if we multip"
+    },
+    {
+      "chain_id": "math500__137__c1",
+      "activation": 5.916490077972412,
+      "token_text": "Wait",
+      "context": " 2 goes into 11 five times in base 10, but in base 5, how is that represented?\n\nWait, maybe I'm overcomplicating. Let me do it step by step.\n\nIn base 5, 2_5 is 2 in"
+    },
+    {
+      "chain_id": "math500__154__c1",
+      "activation": 5.872224807739258,
+      "token_text": "?\n\n",
+      "context": "to the ceiling, then across, then down to the fly. But how much distance is that?\n\nWait, maybe I should think about the net. If I unfold the walls and ceiling into"
+    },
+    {
+      "chain_id": "math500__107__c0",
+      "activation": 5.817972660064697,
+      "token_text": "So",
+      "context": ", 2 is excluded because it's even. Therefore, the intersection will exclude 2.\n\nSo, the intersection of these two sets will consist of all prime numbers less than"
+    },
+    {
+      "chain_id": "math500__76__c2",
+      "activation": 5.7651238441467285,
+      "token_text": " so",
+      "context": " leave out x = 0, which is correct because the function is undefined there. Hmm, so maybe a is zero and b is zero?\n\nBut that can't be, because the problem says x <"
+    },
+    {
+      "chain_id": "math500__82__c1",
+      "activation": 5.753172397613525,
+      "token_text": ".\n\n",
+      "context": "most x-coordinate of the second square. So, x2 - x1 can't be less than 4 - 2 = 2.\n\nTherefore, 3/2 seems to be the maximum slope.\n\nBut wait, let me verify. Maybe th"
+    },
+    {
+      "chain_id": "math500__120__c0",
+      "activation": 5.745699882507324,
+      "token_text": ".\n\n",
+      "context": " Wait, that can't be right unless \\( k(x) \\) is zero, which it isn't necessarily.\n\nWait, maybe I made a mistake here. Let's take it step by step.\n\nLet me denote \\("
+    }
+  ]
+}

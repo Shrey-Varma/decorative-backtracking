@@ -1,0 +1,40 @@
+[project]
+name = "sae-correction-faithfulness"
+version = "0.1.0"
+description = "Causal mediation harness for verbalized self-correction in reasoning models"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.4",
+    "numpy>=1.26",
+    "pandas>=2.0",
+    "scipy>=1.11",
+    "pydantic>=2.5",
+    "pyyaml>=6.0",
+    "tqdm>=4.66",
+    "matplotlib>=3.8",
+    "tabulate>=0.9",
+]
+
+[project.optional-dependencies]
+# Interventional + bulk-generation backends. transformer_lens must support
+# DeepSeek-R1 distills: pin either upstream >=2.15 or the fork commit you
+# validated (see README "Pinning" section) — record the pin in model.yaml too.
+model = [
+    "transformers>=4.44",
+    "accelerate>=0.30",
+    "transformer_lens>=2.15",
+    "sae_lens>=5.0",
+    "datasets>=2.19",
+    "huggingface_hub>=0.23",
+]
+vllm = ["vllm>=0.6"]
+dashboards = ["sae-dashboard>=0.6"]
+verifier = ["openai>=1.30"]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.setuptools]
+packages = []

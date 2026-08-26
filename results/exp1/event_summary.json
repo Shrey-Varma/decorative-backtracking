@@ -1,0 +1,27 @@
+{
+  "n_chains": 800,
+  "n_chains_with_events": 751,
+  "n_events": 14230,
+  "marker_counts": {
+    "wait,": 9629,
+    "hmm": 2819,
+    "but wait": 961,
+    "actually": 319,
+    "let me verify": 112,
+    "hold on": 107,
+    "let me double-check": 81,
+    "wait": 80,
+    "i made a mistake": 59,
+    "no, wait": 16,
+    "my mistake": 16,
+    "that can't be right": 13,
+    "i think i made a mistake": 4,
+    "that doesn't seem right": 4,
+    "that's wrong": 3,
+    "that's not right": 2,
+    "let me re-examine": 2,
+    "i made an error": 1,
+    "that seems off": 1,
+    "oops": 1
+  }
+}

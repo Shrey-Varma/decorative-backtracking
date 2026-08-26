@@ -1,0 +1,97 @@
+experiment:
+  output_dir: runs
+
+  datasets:
+    - name: math500
+      hf_path: HuggingFaceH4/MATH-500
+      split: test
+      problem_field: problem
+      answer_field: answer
+      id_field: null            # null -> use row index
+      limit: 200
+
+  events:
+    lexicon:
+      - "wait"
+      - "wait,"
+      - "wait."
+      - "hold on"
+      - "hmm"
+      - "actually"
+      - "no, wait"
+      - "oh wait"
+      - "but wait"
+      - "on second thought"
+      - "let me reconsider"
+      - "let me recheck"
+      - "let me re-check"
+      - "let me double-check"
+      - "let me double check"
+      - "let me re-examine"
+      - "let me rethink"
+      - "let me verify"
+      - "that's wrong"
+      - "that's not right"
+      - "that is wrong"
+      - "that can't be right"
+      - "i made a mistake"
+      - "i made an error"
+      - "i think i made a mistake"
+      - "scratch that"
+      - "correction:"
+      - "oops"
+      - "my mistake"
+      - "this is incorrect"
+      - "that doesn't seem right"
+      - "that seems off"
+    max_span_tokens: 24         # event span cap past onset
+    merge_gap_tokens: 4         # merge events separated by <= this many tokens
+    min_onset_gap_tokens: 16    # drop events too close to a previous one
+    validation_sample: 50       # events sampled for human labeling (§11 circularity check)
+
+  features:
+    n_candidate_features: 5
+    corpus_max_chains: 200      # chains used for feature scoring
+    nonmarker_per_marker: 1     # matched non-marker tokens sampled per marker token
+    position_match_bins: 10     # deciles for position matching of non-marker tokens
+    prewindow_tokens: 4         # activation window [t0 - prewindow, t1] for answer-predictive score
+    activation_batch_tokens: 4096
+    top_examples_per_feature: 20  # for the fallback dashboard
+
+  trajectory:
+    stride: 32                  # probe grid stride (plus every event onset/offset)
+    align_window_tokens: 8      # flip counts as event-aligned within this window of an onset
+
+  necessity:
+    ablation_mode: zero               # primary (§7.1): zero | mean | counterfactual
+    secondary_ablation_modes: [mean]  # report at least zero + one other (§11)
+    position_mask: event_onward       # primary (§7.2): event_onward | event_only
+    secondary_position_masks: [event_only]
+    ablate_top_k_jointly: false       # §11: ablate all candidates jointly instead of the top one
+    n_candidates_to_test: 1           # §5: >1 adds per-candidate ablation arms (cost scales linearly)
+    control_feature: matched          # matched (by corpus stats) | random
+    control_feature_seed: 0
+    min_control_pos_distance: 32      # control truncation point must be this far from any event
+    max_informative_events: null      # cap wrong->right events for pilots / cost control
+
+  splits:
+    pilot_fraction: 0.3         # chains hashed into pilot vs test
+    split_seed: 17
+
+  # PRE-REGISTER before looking at the test split (§10). Frozen thresholds:
+  decision_rule:
+    min_delta: 0.30             # acc(natural) - acc(ablate_correction) must exceed this
+    max_control_delta: 0.10     # both control conditions must stay under this
+    min_net_revert_rate: 0.50   # REVERT rate net of control DISRUPTED rate
+
+  analysis:
+    n_bootstrap: 2000
+    ci: 0.95
+    bootstrap_seed: 7
+    include_test_split: false   # flip on ONLY after decision_rule is frozen (§10)
+
+  verifier:                     # optional LLM answer verifier (§8) — off by default
+    enabled: false
+    base_url: null              # OpenAI-compatible endpoint
+    model: null
+    api_key_env: OPENAI_API_KEY

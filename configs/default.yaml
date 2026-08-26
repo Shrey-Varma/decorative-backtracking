@@ -1,0 +1,8 @@
+# Composed root config. `includes` are resolved relative to this file and
+# deep-merged in order; keys in this file override the includes.
+includes:
+  - model.yaml
+  - generation.yaml
+  - experiment.yaml
+
+run_name: null   # null -> derived from timestamp + config hash
