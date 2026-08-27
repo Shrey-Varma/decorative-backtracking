@@ -277,7 +277,9 @@ for i, (fam, ds, lo, hi, bfs, n) in enumerate(fams):
              solid_capstyle="butt", zorder=2)
     axc.plot(ds, [y] * len(ds), "o", ms=3.9, color=col, mec="white", mew=0.5,
              zorder=3)
-    axc.annotate(f"{fam}  ({n})", (left_of_axes_c(112), y),
+    # name and family-p are two stacked lines in a 1.0-unit row; at the width
+    # the paper renders this figure they collide at the old 0.34 offset.
+    axc.annotate(f"{fam}  ({n})", (left_of_axes_c(112), y + 0.14),
                  xycoords=axc.get_yaxis_transform(), fontsize=7.6,
                  fontweight="bold", color=col, ha="left", va="center",
                  annotation_clip=False)
@@ -289,7 +291,7 @@ for i, (fam, ds, lo, hi, bfs, n) in enumerate(fams):
                      annotation_clip=False)
     fp = FAM_P.get(fam)
     if fp is not None:
-        axc.annotate(f"family $p$ = {fp:.3f}", (left_of_axes_c(112), y - 0.34),
+        axc.annotate(f"family $p = {fp:.3f}$", (left_of_axes_c(112), y - 0.32),
                      xycoords=axc.get_yaxis_transform(), fontsize=6.2,
                      color="0.45", ha="left", va="center", annotation_clip=False)
 axc.annotate("BF$_{01}$ range", (X_BF, 0.92), fontsize=7.0, ha="center",
