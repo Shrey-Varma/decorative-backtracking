@@ -301,9 +301,11 @@ axc.set_xlim(X_LO, X_HI)
 axc.set_ylim(-len(fams) + 0.35, 1.3)
 axc.set_xticks([-0.2, -0.1, 0.0, 0.1])
 axc.tick_params(axis="x", labelsize=7.8)
-axc.set_xlabel("$\\Delta$ final-answer accuracy vs. matched reference"
-               "   (90% cluster-bootstrap CI, union over family)", fontsize=8.2,
-               labelpad=5)
+# one 95-char line overruns a 230pt-wide axes; two lines keep it inside the
+# figure and off the neighbouring text.
+axc.set_xlabel("$\\Delta$ final-answer accuracy vs. matched reference\n"
+               "90% cluster-bootstrap CI, union over family", fontsize=8.0,
+               labelpad=4)
 axc.spines["left"].set_visible(False)
 axc.set_title("Neither necessary nor sufficient for answer revision",
               fontsize=9.4, pad=9)
