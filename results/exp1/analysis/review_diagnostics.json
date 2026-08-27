@@ -1,0 +1,200 @@
+{
+  "marker_window_chars": 240,
+  "per_condition": {
+    "ablate_control_feature": {
+      "n": 480,
+      "marker_rate_within_240_chars": 0.8541666666666666,
+      "mean_chars": 7999.58125,
+      "no_parseable_answer_rate": 0.22083333333333333
+    },
+    "ablate_correction": {
+      "n": 480,
+      "marker_rate_within_240_chars": 0.85625,
+      "mean_chars": 7909.183333333333,
+      "no_parseable_answer_rate": 0.22916666666666666
+    },
+    "ablate_correction/cand=12002": {
+      "n": 480,
+      "marker_rate_within_240_chars": 0.8458333333333333,
+      "mean_chars": 8208.545833333334,
+      "no_parseable_answer_rate": 0.23958333333333334
+    },
+    "ablate_correction/cand=38107": {
+      "n": 480,
+      "marker_rate_within_240_chars": 0.8520833333333333,
+      "mean_chars": 8117.408333333334,
+      "no_parseable_answer_rate": 0.22916666666666666
+    },
+    "ablate_correction/cand=59368": {
+      "n": 480,
+      "marker_rate_within_240_chars": 0.85,
+      "mean_chars": 8127.408333333334,
+      "no_parseable_answer_rate": 0.21041666666666667
+    },
+    "ablate_correction/cand=62649": {
+      "n": 480,
+      "marker_rate_within_240_chars": 0.8270833333333333,
+      "mean_chars": 8176.270833333333,
+      "no_parseable_answer_rate": 0.24791666666666667
+    },
+    "ablate_correction/joint": {
+      "n": 480,
+      "marker_rate_within_240_chars": 0.8375,
+      "mean_chars": 8225.9875,
+      "no_parseable_answer_rate": 0.24583333333333332
+    },
+    "ablate_correction/mask=event_only": {
+      "n": 480,
+      "marker_rate_within_240_chars": 0.8583333333333333,
+      "mean_chars": 8143.625,
+      "no_parseable_answer_rate": 0.2604166666666667
+    },
+    "ablate_correction/mode=mean": {
+      "n": 480,
+      "marker_rate_within_240_chars": 0.8375,
+      "mean_chars": 7940.38125,
+      "no_parseable_answer_rate": 0.22291666666666668
+    },
+    "ablate_correction_at_control_pos": {
+      "n": 480,
+      "marker_rate_within_240_chars": 0.5083333333333333,
+      "mean_chars": 8109.858333333334,
+      "no_parseable_answer_rate": 0.24583333333333332
+    },
+    "ablate_direction/layer=15": {
+      "n": 480,
+      "marker_rate_within_240_chars": 0.8229166666666666,
+      "mean_chars": 6648.008333333333,
+      "no_parseable_answer_rate": 0.14791666666666667
+    },
+    "ablate_direction/layer=19": {
+      "n": 480,
+      "marker_rate_within_240_chars": 0.8145833333333333,
+      "mean_chars": 6762.422916666666,
+      "no_parseable_answer_rate": 0.14166666666666666
+    },
+    "ablate_direction/layer=23": {
+      "n": 480,
+      "marker_rate_within_240_chars": 0.8125,
+      "mean_chars": 6876.689583333334,
+      "no_parseable_answer_rate": 0.18958333333333333
+    },
+    "add_direction/layer=19/scale=1": {
+      "n": 520,
+      "marker_rate_within_240_chars": 0.49230769230769234,
+      "mean_chars": 8001.036538461539,
+      "no_parseable_answer_rate": 0.21923076923076923
+    },
+    "add_direction/layer=19/scale=2": {
+      "n": 512,
+      "marker_rate_within_240_chars": 0.541015625,
+      "mean_chars": 8196.4609375,
+      "no_parseable_answer_rate": 0.240234375
+    },
+    "clamp_on_feature/scale=1": {
+      "n": 520,
+      "marker_rate_within_240_chars": 0.47115384615384615,
+      "mean_chars": 8043.509615384615,
+      "no_parseable_answer_rate": 0.24807692307692308
+    },
+    "clamp_on_feature/scale=2": {
+      "n": 512,
+      "marker_rate_within_240_chars": 0.49609375,
+      "mean_chars": 8057.0078125,
+      "no_parseable_answer_rate": 0.244140625
+    },
+    "insert_correction/v=assert_mistake": {
+      "n": 1848,
+      "marker_rate_within_240_chars": 0.5708874458874459,
+      "mean_chars": 7807.864718614718,
+      "no_parseable_answer_rate": 0.2196969696969697
+    },
+    "insert_correction/v=minimal_marker": {
+      "n": 1848,
+      "marker_rate_within_240_chars": 0.4967532467532468,
+      "mean_chars": 7542.672619047619,
+      "no_parseable_answer_rate": 0.20941558441558442
+    },
+    "insert_correction/v=soft_recheck": {
+      "n": 1848,
+      "marker_rate_within_240_chars": 0.44047619047619047,
+      "mean_chars": 7782.730519480519,
+      "no_parseable_answer_rate": 0.21645021645021645
+    },
+    "insert_filler": {
+      "n": 1848,
+      "marker_rate_within_240_chars": 0.6985930735930735,
+      "mean_chars": 7877.873376623376,
+      "no_parseable_answer_rate": 0.22294372294372294
+    },
+    "insert_natural": {
+      "n": 1848,
+      "marker_rate_within_240_chars": 0.49188311688311687,
+      "mean_chars": 7308.252164502164,
+      "no_parseable_answer_rate": 0.21645021645021645
+    },
+    "natural_at_insert": {
+      "n": 480,
+      "marker_rate_within_240_chars": 0.46875,
+      "mean_chars": 7957.23125,
+      "no_parseable_answer_rate": 0.23333333333333334
+    },
+    "natural_resample": {
+      "n": 480,
+      "marker_rate_within_240_chars": 0.85625,
+      "mean_chars": 8114.4125,
+      "no_parseable_answer_rate": 0.25
+    },
+    "text_neutral_filler": {
+      "n": 480,
+      "marker_rate_within_240_chars": 0.7416666666666667,
+      "mean_chars": 8374.522916666667,
+      "no_parseable_answer_rate": 0.24791666666666667
+    },
+    "text_with_correction": {
+      "n": 480,
+      "marker_rate_within_240_chars": 0.55,
+      "mean_chars": 8124.072916666667,
+      "no_parseable_answer_rate": 0.23958333333333334
+    },
+    "text_without_correction": {
+      "n": 480,
+      "marker_rate_within_240_chars": 0.80625,
+      "mean_chars": 8128.93125,
+      "no_parseable_answer_rate": 0.25625
+    }
+  },
+  "direction_ablation_summary": {
+    "reference": "natural_resample",
+    "reference_marker_rate": 0.85625,
+    "direction_marker_rate_range": [
+      0.8125,
+      0.8229166666666666
+    ],
+    "direction_length_ratio_range": [
+      0.8192840003306873,
+      0.8474661084007417
+    ],
+    "note": "Marker emission is near-unchanged under direction ablation while continuations shorten, so the accuracy gain is a termination effect and not suppressed reconsideration."
+  },
+  "continuations_available": true,
+  "probe_volatility_by_distance_to_onset": {
+    "0-32": {
+      "n_pairs": 36596,
+      "answer_change_rate": 0.11976718767078369
+    },
+    "32-96": {
+      "n_pairs": 27486,
+      "answer_change_rate": 0.1347958960925562
+    },
+    "96-256": {
+      "n_pairs": 18843,
+      "answer_change_rate": 0.14132569123812555
+    },
+    "256-inf": {
+      "n_pairs": 8882,
+      "answer_change_rate": 0.12970051790137357
+    }
+  },
+  "probe_volatility_note": "Stride-only grid; probe points on an event onset or span end are dropped. A flat profile means the probe is no noisier at the positions event selection uses."
+}

@@ -1,0 +1,167 @@
+#!/usr/bin/env python
+"""Stage 18: diagnostics for two claims the paper makes outside the main
+statistical pipeline.
+
+(a) DIRECTION-ABLATION MECHANISM (paper sec:results:necessity). Ablating the
+    difference-in-means correction direction raises accuracy, and the paper
+    attributes that to fewer chains being censored at the token cap rather
+    than to suppressed reconsideration. That attribution is only checkable if
+    we measure whether the ablation actually reduces reconsideration LANGUAGE.
+    It does not: marker re-emission is near-unchanged while continuations get
+    materially shorter, so the gain is a termination effect.
+
+(b) PROBE RELIABILITY NEAR EVENTS (paper sec:methods:probe). The force-answer
+    probe's instrument check is at the FINAL chain position, but the design
+    selects events using probe reads at arbitrary mid-chain positions. There
+    is no ground truth mid-chain, so we use volatility as a proxy: the rate at
+    which ADJACENT grid points disagree on the intended answer, bucketed by
+    distance to the nearest marker onset. If the probe were noisier at the
+    moments selection relies on, that rate would rise near markers.
+
+    Uses the STRIDE-ONLY grid. Probe points sitting on an event boundary carry
+    the +2.0-point measurement bias documented in 16_make_figures_extra.py, so
+    both onsets and span ends are dropped before measuring.
+
+  python scripts/18_review_diagnostics.py --run-dir results/exp1
+"""
+
+import json
+import re
+import sys
+from collections import defaultdict
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+from src.cli import script_setup
+from src.io_utils import write_json
+
+MARKER_WINDOW_CHARS = 240   # matches the re-emission window used in the paper
+DIST_BUCKETS = [(0, 32), (32, 96), (96, 256), (256, None)]
+
+
+def jl(path):
+    with path.open() as fh:
+        for line in fh:
+            yield json.loads(line)
+
+
+def marker_pattern(lexicon):
+    # identical construction to src.events._marker_pattern
+    parts = sorted((re.escape(m) for m in lexicon), key=len, reverse=True)
+    return re.compile(r"(?<![a-z])(" + "|".join(parts) + r")(?![a-z])", re.IGNORECASE)
+
+
+def continuation_stats(run_dir, pat):
+    agg = defaultdict(lambda: {"n": 0, "marker": 0, "chars": 0, "no_answer": 0})
+    for d in jl(run_dir / "continuations.jsonl"):
+        a = agg[d["condition"]]
+        text = d.get("text") or ""
+        a["n"] += 1
+        a["chars"] += len(text)
+        a["marker"] += bool(pat.search(text[:MARKER_WINDOW_CHARS]))
+        a["no_answer"] += not d.get("final_answer")
+    return {
+        cond: {
+            "n": a["n"],
+            "marker_rate_within_240_chars": a["marker"] / a["n"],
+            "mean_chars": a["chars"] / a["n"],
+            "no_parseable_answer_rate": a["no_answer"] / a["n"],
+        }
+        for cond, a in sorted(agg.items())
+    }
+
+
+def probe_volatility(run_dir):
+    onsets, boundary = {}, {}
+    for d in jl(run_dir / "events.jsonl"):
+        onsets.setdefault(d["chain_id"], []).append(d["onset"])
+        boundary.setdefault(d["chain_id"], set()).update((d["onset"], d["end"]))
+    onsets = {k: sorted(v) for k, v in onsets.items()}
+
+    buckets = {f"{lo}-{hi if hi else 'inf'}": [0, 0] for lo, hi in DIST_BUCKETS}
+    for t in jl(run_dir / "trajectories.jsonl"):
+        cid = t["chain_id"]
+        ons = onsets.get(cid)
+        if not ons:
+            continue
+        bad = boundary.get(cid, set())
+        pts = [p for p in t["points"] if p["position"] not in bad]
+        for a, b in zip(pts, pts[1:]):
+            mid = (a["position"] + b["position"]) / 2
+            dist = min(abs(mid - o) for o in ons)
+            for lo, hi in DIST_BUCKETS:
+                if dist >= lo and (hi is None or dist < hi):
+                    k = f"{lo}-{hi if hi else 'inf'}"
+                    buckets[k][1] += 1
+                    buckets[k][0] += a["answer"] != b["answer"]
+                    break
+    return {
+        k: {"n_pairs": n, "answer_change_rate": (c / n) if n else None}
+        for k, (c, n) in buckets.items()
+    }
+
+
+def main() -> None:
+    cfg, _cfg_dict, run_dir = script_setup("18_review_diagnostics")
+    pat = marker_pattern(cfg.experiment.events.lexicon)
+
+    # continuations.jsonl is 174 MB and not in the code release. The volatility
+    # half runs off trajectories.jsonl + events.jsonl, which are tracked, so
+    # report what is computable rather than failing outright.
+    if (run_dir / "continuations.jsonl").exists():
+        conts = continuation_stats(run_dir, pat)
+    else:
+        conts = {}
+        print("continuations.jsonl absent: skipping the direction-ablation half; "
+              "its computed values are in the committed review_diagnostics.json\n")
+    volat = probe_volatility(run_dir)
+
+    ref = conts.get("natural_resample")
+    direction = {k: v for k, v in conts.items() if k.startswith("ablate_direction")}
+    summary = None
+    if ref and direction:
+        summary = {
+            "reference": "natural_resample",
+            "reference_marker_rate": ref["marker_rate_within_240_chars"],
+            "direction_marker_rate_range": [
+                min(v["marker_rate_within_240_chars"] for v in direction.values()),
+                max(v["marker_rate_within_240_chars"] for v in direction.values()),
+            ],
+            "direction_length_ratio_range": [
+                min(v["mean_chars"] for v in direction.values()) / ref["mean_chars"],
+                max(v["mean_chars"] for v in direction.values()) / ref["mean_chars"],
+            ],
+            "note": ("Marker emission is near-unchanged under direction ablation while "
+                     "continuations shorten, so the accuracy gain is a termination "
+                     "effect and not suppressed reconsideration."),
+        }
+
+    record = {
+        "marker_window_chars": MARKER_WINDOW_CHARS,
+        "per_condition": conts,
+        "direction_ablation_summary": summary,
+        "continuations_available": bool(conts),
+        "probe_volatility_by_distance_to_onset": volat,
+        "probe_volatility_note": ("Stride-only grid; probe points on an event onset or "
+                                  "span end are dropped. A flat profile means the probe "
+                                  "is no noisier at the positions event selection uses."),
+    }
+    out = run_dir / "analysis" / "review_diagnostics.json"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    write_json(out, record)
+    print(f"-> {out}\n")
+
+    if summary:
+        lo, hi = summary["direction_marker_rate_range"]
+        rlo, rhi = summary["direction_length_ratio_range"]
+        print(f"direction ablation: marker {lo:.3f}-{hi:.3f} vs "
+              f"{summary['reference_marker_rate']:.3f} natural; "
+              f"length {100*(1-rhi):.0f}-{100*(1-rlo):.0f}% shorter")
+    print("\nprobe volatility (adjacent-point answer change):")
+    for k, v in volat.items():
+        print(f"  dist {k:>9s}  n={v['n_pairs']:6d}  rate={v['answer_change_rate']:.3f}")
+
+
+if __name__ == "__main__":
+    main()

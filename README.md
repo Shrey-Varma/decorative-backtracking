@@ -35,6 +35,11 @@ python scripts/16_make_figures_extra.py  # -> results/figures/
 ```
 
 `scripts/17_make_release_subset.py` regenerates `release/` from a full run.
+`scripts/18_review_diagnostics.py` recomputes the two diagnostics the paper
+reports outside the main pipeline (direction-ablation marker rates and
+continuation lengths; force-answer probe volatility by distance to a marker);
+its probe half runs off what is tracked here, and its committed output is
+`results/exp1/analysis/review_diagnostics.json`.
 Everything upstream of stage 14 needs the raw output and a GPU.
 
 ## Layout
