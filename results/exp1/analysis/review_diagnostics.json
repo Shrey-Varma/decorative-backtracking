@@ -196,5 +196,33 @@
       "answer_change_rate": 0.12970051790137357
     }
   },
+  "selection_purity_at_boundaries": {
+    "n_informative_boundary_grid": 171,
+    "n_surviving_stride_grid": 59,
+    "survival_overall": 0.34502923976608185,
+    "survival_by_extra_window_tokens": {
+      "<=8": {
+        "n": 6,
+        "survived": 4,
+        "rate": 0.6666666666666666
+      },
+      "9-16": {
+        "n": 42,
+        "survived": 21,
+        "rate": 0.5
+      },
+      "17-32": {
+        "n": 115,
+        "survived": 33,
+        "rate": 0.28695652173913044
+      },
+      ">32": {
+        "n": 8,
+        "survived": 1,
+        "rate": 0.125
+      }
+    },
+    "note": "Survival rises monotonically as the substitute points sit closer to the true boundaries, so most of the loss is the wider window rather than the boundary measurement bias."
+  },
   "probe_volatility_note": "Stride-only grid; probe points on an event onset or span end are dropped. A flat profile means the probe is no noisier at the positions event selection uses."
 }

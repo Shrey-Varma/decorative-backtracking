@@ -10,6 +10,15 @@ statistical pipeline.
     It does not: marker re-emission is near-unchanged while continuations get
     materially shorter, so the gain is a termination effect.
 
+(c) SELECTION PURITY AT EVENT BOUNDARIES (paper app:probe). Events are
+    selected by two probe reads at the event's own boundaries, and boundary
+    reads carry the +2.0-point bias documented in 16_make_figures_extra.py.
+    Re-deriving the informative set from the nearest STRIDE points outside the
+    span instead retains far fewer events -- but that substitution also widens
+    the window, so we bucket survival by how many extra tokens it introduces.
+    Survival tracks the widening, not the bias, which is why purity enters the
+    partial-identification bound as an unknown rather than a point estimate.
+
 (b) PROBE RELIABILITY NEAR EVENTS (paper sec:methods:probe). The force-answer
     probe's instrument check is at the FINAL chain position, but the design
     selects events using probe reads at arbitrary mid-chain positions. There
@@ -102,6 +111,52 @@ def probe_volatility(run_dir):
     }
 
 
+def selection_purity(run_dir):
+    """Informative events re-derived on the stride-only grid, bucketed by how
+    much extra window the substitution introduces."""
+    events, boundary = {}, {}
+    for d in jl(run_dir / "events.jsonl"):
+        events.setdefault(d["chain_id"], []).append((d["event_id"], d["onset"], d["end"]))
+        boundary.setdefault(d["chain_id"], set()).update((d["onset"], d["end"], d["end"] + 1))
+    pts = {t["chain_id"]: {p["position"]: (p["answer"], p["correct"]) for p in t["points"]}
+           for t in jl(run_dir / "trajectories.jsonl")}
+
+    selected = []
+    for cid, evs in events.items():
+        P = pts.get(cid, {})
+        for eid, on, en in evs:
+            pre, post = P.get(on), P.get(en + 1)
+            if pre and post and pre[0] is not None and not pre[1] and post[1]:
+                selected.append((cid, on, en))
+
+    buckets = {k: [0, 0] for k in ("<=8", "9-16", "17-32", ">32")}
+    for cid, on, en in selected:
+        P, bad = pts[cid], boundary[cid]
+        before = [p for p in P if p not in bad and p < on]
+        after = [p for p in P if p not in bad and p > en]
+        if not before or not after:
+            continue
+        bp, ap = max(before), min(after)
+        gap = max(on - bp, ap - en)
+        k = "<=8" if gap <= 8 else "9-16" if gap <= 16 else "17-32" if gap <= 32 else ">32"
+        buckets[k][1] += 1
+        buckets[k][0] += P[bp][0] is not None and not P[bp][1] and P[ap][1]
+
+    tot_n = sum(n for _, n in buckets.values())
+    tot_k = sum(k for k, _ in buckets.values())
+    return {
+        "n_informative_boundary_grid": len(selected),
+        "n_surviving_stride_grid": tot_k,
+        "survival_overall": (tot_k / tot_n) if tot_n else None,
+        "survival_by_extra_window_tokens": {
+            k: {"n": n, "survived": c, "rate": (c / n) if n else None}
+            for k, (c, n) in buckets.items()},
+        "note": ("Survival rises monotonically as the substitute points sit closer to "
+                 "the true boundaries, so most of the loss is the wider window rather "
+                 "than the boundary measurement bias."),
+    }
+
+
 def main() -> None:
     cfg, _cfg_dict, run_dir = script_setup("18_review_diagnostics")
     pat = marker_pattern(cfg.experiment.events.lexicon)
@@ -116,6 +171,7 @@ def main() -> None:
         print("continuations.jsonl absent: skipping the direction-ablation half; "
               "its computed values are in the committed review_diagnostics.json\n")
     volat = probe_volatility(run_dir)
+    purity = selection_purity(run_dir)
 
     ref = conts.get("natural_resample")
     direction = {k: v for k, v in conts.items() if k.startswith("ablate_direction")}
@@ -143,6 +199,7 @@ def main() -> None:
         "direction_ablation_summary": summary,
         "continuations_available": bool(conts),
         "probe_volatility_by_distance_to_onset": volat,
+        "selection_purity_at_boundaries": purity,
         "probe_volatility_note": ("Stride-only grid; probe points on an event onset or "
                                   "span end are dropped. A flat profile means the probe "
                                   "is no noisier at the positions event selection uses."),
@@ -158,6 +215,14 @@ def main() -> None:
         print(f"direction ablation: marker {lo:.3f}-{hi:.3f} vs "
               f"{summary['reference_marker_rate']:.3f} natural; "
               f"length {100*(1-rhi):.0f}-{100*(1-rlo):.0f}% shorter")
+    p = record["selection_purity_at_boundaries"]
+    print(f"\nselection purity: {p['n_surviving_stride_grid']}/"
+          f"{p['n_informative_boundary_grid']} survive the stride grid "
+          f"({p['survival_overall']:.1%})")
+    for k, v in p["survival_by_extra_window_tokens"].items():
+        if v["n"]:
+            print(f"  +{k:>6s} tok window  n={v['n']:4d}  survived={v['rate']:.1%}")
+
     print("\nprobe volatility (adjacent-point answer change):")
     for k, v in volat.items():
         print(f"  dist {k:>9s}  n={v['n_pairs']:6d}  rate={v['answer_change_rate']:.3f}")
